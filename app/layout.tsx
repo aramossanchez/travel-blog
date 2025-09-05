@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import "./globals.css";
+import HeaderOrganism from "@/organisms/header/header";
+import FooterOrganism from "@/organisms/footer/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const merriWeather = Merriweather({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: "normal",
   subsets: ["latin"],
 });
 
@@ -24,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${merriWeather.className}`}>
+        <HeaderOrganism />
         {children}
+        <FooterOrganism />
       </body>
     </html>
   );
