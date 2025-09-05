@@ -1,9 +1,32 @@
+import SectionMolecule from "@/molecules/section/section";
 import React from "react";
 
 export default function SectionsOrganism() {
   return (
-    <div className="organism">
-      <h1>SECTIONS</h1>
-    </div>
+    <article className="organism space-y-8">
+      <hr className="border-t-4" />
+      <main className="grid grid-cols-2 gap-8">
+        <SectionMolecule
+          image="/motorbike.webp"
+          title="Explorando en moto"
+          text="Una guía completa sobre los mejores destinos para viajar en moto, con vídeo completo de la ruta, ruta de google maps, posibles paradas o desvíos, y más."
+        />
+        <SectionMolecule
+          image="/rocodromo.jpeg"
+          title="Rocódromos que no te puedes perder"
+          text="Listado de todos los rocódromos que he probado en mis viajes. Toda la información sobre tamaño, cafetería, cantidad de rutas, nivel de dificultad, existencia de vías con autoaseguradores, y más."
+        />
+        <SectionMolecule
+          image="/senderismo.jpg"
+          title="Senderismo en los mejores parajes"
+          text="Una recopilación de las rutas de senderismo más impresionantes que he recorrido, con detalles sobre la dificultad, duración y paisajes."
+        />
+        <SectionMolecule
+          image="/patinar.jpg"
+          title="Rutas de patinaje"
+          text="Una guía sobre los mejores lugares para patinar, con información sobre lo viable que es el suelo en cada tramo de la ruta, el entorno y consejos para disfrutar al máximo."
+        />
+      </main>
+    </article>
   );
 }

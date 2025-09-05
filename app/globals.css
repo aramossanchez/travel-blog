@@ -27,6 +27,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
 .layout_component {
   width: 100%;
   background-color: var(--foreground);
