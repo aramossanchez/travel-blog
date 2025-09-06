@@ -56,3 +56,10 @@ h2 {
   grid-column-end: 10;
   padding: 40px 0;
 }
+
+.text_route_molecule {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -26,6 +26,11 @@ export default function SectionsOrganism() {
           title="Rutas de patinaje"
           text="Una guía sobre los mejores lugares para patinar, con información sobre lo viable que es el suelo en cada tramo de la ruta, el entorno y consejos para disfrutar al máximo."
         />
+        <SectionMolecule
+          image="/comida.jpg"
+          title="¿Paro a comer aquí o no?"
+          text="Mi experiencia y opinión sobre los lugares donde he parado a comer en cada uno de mis viajes y destinos."
+        />
       </main>
     </article>
   );
