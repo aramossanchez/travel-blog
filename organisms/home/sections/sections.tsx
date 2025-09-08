@@ -4,7 +4,8 @@ import React from "react";
 export default function SectionsOrganism() {
   return (
     <article className="organism space-y-8">
-      <hr className="border-t-4" />
+      <h2>Secciones</h2>
+      <hr className="border-t-4 border-primaryColor" />
       <main className="grid grid-cols-2 gap-8">
         <SectionMolecule
           image="/motorbike.webp"
@@ -30,6 +31,11 @@ export default function SectionsOrganism() {
           image="/comida.jpg"
           title="¿Paro a comer aquí o no?"
           text="Mi experiencia y opinión sobre los lugares donde he parado a comer en cada uno de mis viajes y destinos."
+        />
+        <SectionMolecule
+          image="/casa.webp"
+          title="Donde paro a dormir"
+          text="Los sitios en los que me alojo (siempre sostenibles y nada invasivos contra el pueblo o barrio) y mi experiencia en cada uno de ellos, con todos los detalles."
         />
       </main>
     </article>

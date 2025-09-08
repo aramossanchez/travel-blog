@@ -4,6 +4,7 @@ export default function LastRoutesOrganism() {
   return (
     <article className="organism space-y-8">
       <h2>Mis últimas Rutas</h2>
+      <hr className="border-t-4 border-primaryColor" />
       <main className="grid grid-cols-3 gap-8">
         <RouteMolecule
           title="Cuenca"
