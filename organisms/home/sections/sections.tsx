@@ -13,6 +13,11 @@ export default function SectionsOrganism() {
           text="Una guía completa sobre los mejores destinos para viajar en moto, con vídeo completo de la ruta, ruta de google maps, posibles paradas o desvíos, y más."
         />
         <SectionMolecule
+          image="/town.avif"
+          title="Descubriendo..."
+          text="Visitas guiadas por los pueblos y ciudades que visito. Fotos, vídeos, historia, cultura, gastronomía y más."
+        />
+        <SectionMolecule
           image="/rocodromo.jpeg"
           title="Rocódromos que no te puedes perder"
           text="Listado de todos los rocódromos que he probado en mis viajes. Toda la información sobre tamaño, cafetería, cantidad de rutas, nivel de dificultad, existencia de vías con autoaseguradores, y más."

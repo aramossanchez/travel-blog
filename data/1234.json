@@ -1,8 +1,120 @@
 [
   {
+    "route": {
+      "content": [
+        {
+          "type": "primaryTitle",
+          "text": "Cuenca"
+        },
+        {
+          "type": "introduction",
+          "text": "Una escapada de fin de semana a Cuenca."
+        }
+      ]
+    },
     "travel": {
-      "title": "De Valencia a Cuenca",
-      "paragraph": "Empezamos saliendo desde Valencia."
+      "content": [
+        {
+          "type": "title",
+          "text": "De Valencia a Cuenca"
+        },
+        {
+          "type": "paragraph",
+          "text": "Empezamos saliendo desde Valencia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tenemos tremendo atasco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Finalmente llegamos a Cuenca tras 58 minutos de viaje."
+        }
+      ]
+    },
+    "sleep": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Hotel muy crema"
+        },
+        {
+          "type": "paragraph",
+          "text": "El hotel fue un lugar acogedor."
+        }
+      ]
+    },
+    "eat": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Comida típica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Probamos la gastronomía local."
+        }
+      ]
+    },
+    "climb": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Rocódromo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Escalamos en un rocódromo cercano."
+        }
+      ]
+    },
+    "hiking": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Ruta de senderismo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hicimos una ruta de senderismo por la montaña."
+        }
+      ]
+    },
+    "roller": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Paseo en patines"
+        },
+        {
+          "type": "paragraph",
+          "text": "Disfrutamos de un paseo en patines por el parque."
+        }
+      ]
+    },
+    "freetour": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Free tour por la ciudad"
+        },
+        {
+          "type": "paragraph",
+          "text": "Participamos en un free tour para conocer la historia de la ciudad."
+        }
+      ]
+    },
+    "return": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Regreso a Valencia"
+        },
+        {
+          "type": "paragraph",
+          "text": "Volvimos a Valencia después de un viaje increíble."
+        }
+      ]
     }
   }
 ]
