@@ -8,7 +8,7 @@
         },
         {
           "type": "introduction",
-          "text": "Una escapada de fin de semana a Cuenca."
+          "text": "Visita express a Cuenca, pasando por todas sus zonas más características en su zona antigua, y descubriendo su zona nueva. Empieza el viaje saliendo en moto desde Valencia, pasando por la A3 sin tomar ningún desvío. Parada en gasolinera para tomar café y repostar y viajar tranquilo."
         }
       ]
     },
@@ -41,6 +41,12 @@
         {
           "type": "paragraph",
           "text": "El hotel fue un lugar acogedor."
+        },
+        {
+          "type": "image",
+          "src": "/casa.webp",
+          "alt": "Foto de la casa rural",
+          "label": "Foto de la casa rural donde me alojé en Cuenca durante 3 días."
         }
       ]
     },

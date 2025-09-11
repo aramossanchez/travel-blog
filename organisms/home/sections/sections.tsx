@@ -1,3 +1,4 @@
+import HrAtom from "@/atoms/hr";
 import SectionMolecule from "@/molecules/section/section";
 import React from "react";
 
@@ -5,7 +6,7 @@ export default function SectionsOrganism() {
   return (
     <article className="organism space-y-8">
       <h2>Secciones</h2>
-      <hr className="border-t-4 border-primaryColor" />
+      <HrAtom />
       <main className="grid grid-cols-2 gap-8">
         <SectionMolecule
           image="/motorbike.webp"

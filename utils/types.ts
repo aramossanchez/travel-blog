@@ -3,7 +3,7 @@ export type ContentBlock =
   | { type: "primaryTitle"; text: string }
   | { type: "introduction"; text: string }
   | { type: "paragraph"; text: string }
-  | { type: "image"; src: string; alt?: string; caption?: string };
+  | { type: "image"; src: string; alt: string; label: string };
 
 export interface Section {
   content: ContentBlock[];
