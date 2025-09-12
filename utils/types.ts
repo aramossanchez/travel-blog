@@ -1,9 +1,17 @@
+export type CarouselItem = {
+  src: string;
+  alt: string;
+  label: string;
+};
+
 export type ContentBlock =
   | { type: "title"; text: string }
+  | { type: "subtitle"; text: string }
   | { type: "primaryTitle"; text: string }
   | { type: "introduction"; text: string }
   | { type: "paragraph"; text: string }
-  | { type: "image"; src: string; alt: string; label: string };
+  | { type: "image"; src: string; alt: string; label: string }
+  | { type: "carrousel"; carrousel: CarouselItem[] };
 
 export interface Section {
   content: ContentBlock[];
@@ -20,4 +28,6 @@ export type SectionKey =
   | "freetour"
   | "return";
 
-export type RouteDataType = { [K in SectionKey]: Section };
+export type RouteDataType = { id: string } & {
+  [K in SectionKey]: Section;
+};

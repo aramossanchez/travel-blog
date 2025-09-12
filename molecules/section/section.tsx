@@ -1,19 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface SectionMoleculeProps {
+interface SectionInHomeMoleculeProps {
   image?: string;
   title?: string;
   text?: string;
   href?: string;
 }
 
-export default function SectionMolecule({
+export default function SectionInHomeMolecule({
   image = "",
   title = "",
   text = "",
   href = "/section/1234",
-}: SectionMoleculeProps) {
+}: SectionInHomeMoleculeProps) {
   return (
     <div className="h-fit space-y-4">
       <Link href={href} className="flex flex-col gap-y-4">

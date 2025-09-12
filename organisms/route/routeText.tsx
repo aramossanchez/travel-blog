@@ -1,72 +1,35 @@
+import SectionInSingleRouteMolecule from "@/molecules/route/sectionInSingleRoute";
 import routeJsonToHtml from "@/services/routeJsonToHtml";
-import { RouteDataType } from "@/utils/types";
+import { RouteDataType, SectionKey } from "@/utils/types";
 
 interface RouteTextOrganismProps {
   data: RouteDataType;
 }
 
 export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
-  console.log(data);
+  const sectionKeys: SectionKey[] = Object.keys(data).filter(
+    (key) => key !== "id"
+  ) as SectionKey[];
   return (
     <article className="organism space-y-16">
-      {data.route && (
-        <header className="w-full space-y-4">
-          {data.route.content.map((data) => {
-            return routeJsonToHtml({ data, sectionType: "route" });
-          })}
-        </header>
-      )}
-      {data.travel && (
-        <section className="w-full space-y-2">
-          {data.travel.content.map((data) => {
-            return routeJsonToHtml({ data, sectionType: "travel" });
-          })}
-        </section>
-      )}
-      {data.freetour && (
-        <section className="w-full space-y-2">
-          {data.freetour.content.map((data) => {
-            return routeJsonToHtml({ data, sectionType: "freetour" });
-          })}
-        </section>
-      )}
-      {/* {data.hiking && (
-        <section className="w-full">
-          <h2>{data.hiking.title}</h2>
-          <p>{data.hiking.paragraph}</p>
-        </section>
-      )} */}
-      {/* {data.roller && (
-        <section className="w-full">
-          <h2>{data.roller.title}</h2>
-          <p>{data.roller.paragraph}</p>
-        </section>
-      )} */}
-      {/* {data.climb && (
-        <section className="w-full">
-          <h2>{data.climb.title}</h2>
-          <p>{data.climb.paragraph}</p>
-        </section>
-      )} */}
-      {data.sleep && (
-        <section className="w-full space-y-2">
-          {data.sleep.content.map((data) => {
-            return routeJsonToHtml({ data, sectionType: "sleep" });
-          })}
-        </section>
-      )}
-      {/* {data.eat && (
-        <section className="w-full">
-          <h2>{data.eat.title}</h2>
-          <p>{data.eat.paragraph}</p>
-        </section>
-      )}
-      {data.return && (
-        <section className="w-full">
-          <h2>{data.return.title}</h2>
-          <p>{data.return.paragraph}</p>
-        </section>
-      )} */}
+      {sectionKeys.map((key: SectionKey) => {
+        if (key === "route") {
+          return (
+            <header key={`section-${key}`} className="w-full space-y-4">
+              {data.route.content.map((data) => {
+                return routeJsonToHtml({ data, sectionType: key });
+              })}
+            </header>
+          );
+        }
+        return (
+          <SectionInSingleRouteMolecule
+            key={`section-${key}`}
+            content={data?.[key].content}
+            sectionType={key}
+          />
+        );
+      })}
     </article>
   );
 }

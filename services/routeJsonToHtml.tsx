@@ -27,6 +27,8 @@ export default function routeJsonToHtml({
           <HrAtom />
         </header>
       );
+    case "subtitle":
+      return <h3>{data.text}</h3>;
     case "paragraph":
       return <p>{data.text}</p>;
     case "image":
@@ -43,6 +45,28 @@ export default function routeJsonToHtml({
           <label className="italic" htmlFor={data.src}>
             · {data.label}
           </label>
+        </div>
+      );
+    case "carrousel":
+      return (
+        <div className="grid grid-cols-4 gap-4">
+          {data.carrousel.map((image) => {
+            return (
+              <div key={image.src}>
+                <Image
+                  id={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  width={500}
+                  height={300}
+                  className="min-h-[250px] max-h-[250px] sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center"
+                />
+                <label className="italic" htmlFor={image.src}>
+                  · {image.label}
+                </label>
+              </div>
+            );
+          })}
         </div>
       );
     default:

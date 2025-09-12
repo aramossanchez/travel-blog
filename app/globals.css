@@ -41,6 +41,13 @@ h2 {
   font-weight: 700;
   line-height: 1.2;
 }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .layout_component {
   width: 100%;
   background-color: var(--foreground);

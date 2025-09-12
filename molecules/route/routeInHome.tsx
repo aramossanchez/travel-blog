@@ -2,19 +2,19 @@ import LocationIcon from "@/atoms/icons/location";
 import Image from "next/image";
 import Link from "next/link";
 
-interface RouteMoleculeProps {
+interface RouteinHomeMoleculeProps {
   image?: string;
   title?: string;
   text?: string;
   href?: string;
 }
 
-export default function RouteMolecule({
+export default function RouteinHomeMolecule({
   image = "",
   title = "",
   text = "",
   href = "/route/1234",
-}: RouteMoleculeProps) {
+}: RouteinHomeMoleculeProps) {
   return (
     <div className="h-fit flex flex-col gap-y-4">
       <Link href={href} className="flex items-center gap-x-4">

@@ -1,5 +1,6 @@
 [
   {
+    "id": "1234",
     "route": {
       "content": [
         {
@@ -32,6 +33,54 @@
         }
       ]
     },
+    "freetour": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Free tour por la ciudad"
+        },
+        {
+          "type": "paragraph",
+          "text": "Participamos en un free tour para conocer la historia de la ciudad."
+        }
+      ]
+    },
+    "hiking": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Ruta de senderismo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hicimos una ruta de senderismo por la montaña."
+        }
+      ]
+    },
+    "climb": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Rocódromo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Escalamos en un rocódromo cercano."
+        }
+      ]
+    },
+    "roller": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Paseo en patines"
+        },
+        {
+          "type": "paragraph",
+          "text": "Disfrutamos de un paseo en patines por el parque."
+        }
+      ]
+    },
     "sleep": {
       "content": [
         {
@@ -54,59 +103,55 @@
       "content": [
         {
           "type": "title",
-          "text": "Comida típica"
+          "text": "Qué es lo que comí"
         },
         {
           "type": "paragraph",
-          "text": "Probamos la gastronomía local."
-        }
-      ]
-    },
-    "climb": {
-      "content": [
+          "text": "Disfruté muchísimo en los sitios donde paré a comer. Estuve comiendo en un japonés y cené en un sitio típico de la ciudad. Al día siguiente desayuné en el buffet del hotel, comí en un italiano y cené en un mexicano. El último día desayuné en una cafetería muy chula."
+        },
         {
-          "type": "title",
-          "text": "Rocódromo"
+          "type": "subtitle",
+          "text": "Comida del día de llegada, en un japonés."
+        },
+        {
+          "type": "image",
+          "src": "/restaurante-japones.jpg",
+          "alt": "Foto del restaurante japonés",
+          "label": "Foto del restaurante japonés donde comí en Cuenca."
         },
         {
           "type": "paragraph",
-          "text": "Escalamos en un rocódromo cercano."
-        }
-      ]
-    },
-    "hiking": {
-      "content": [
-        {
-          "type": "title",
-          "text": "Ruta de senderismo"
+          "text": "Un japonés tremendo llamado Sakura, donde probé un ramen increíble y un sushi que estaba para morirse."
         },
         {
-          "type": "paragraph",
-          "text": "Hicimos una ruta de senderismo por la montaña."
-        }
-      ]
-    },
-    "roller": {
-      "content": [
-        {
-          "type": "title",
-          "text": "Paseo en patines"
-        },
-        {
-          "type": "paragraph",
-          "text": "Disfrutamos de un paseo en patines por el parque."
-        }
-      ]
-    },
-    "freetour": {
-      "content": [
-        {
-          "type": "title",
-          "text": "Free tour por la ciudad"
-        },
-        {
-          "type": "paragraph",
-          "text": "Participamos en un free tour para conocer la historia de la ciudad."
+          "type": "carrousel",
+          "carrousel": [
+            {
+              "src": "/ramen.jpg",
+              "alt": "comida-1",
+              "label": "Ramen buenísimo"
+            },
+            {
+              "src": "/sushi.webp",
+              "alt": "comida-2",
+              "label": "Sushi increíble"
+            },
+            {
+              "src": "/takoyaki.png",
+              "alt": "comida-3",
+              "label": "Takoyaki impresionante"
+            },
+            {
+              "src": "/gyoza.jpg",
+              "alt": "comida-4",
+              "label": "Gyozas deliciosas"
+            },
+            {
+              "src": "/mochi.jpg",
+              "alt": "comida-5",
+              "label": "Mochis de locura"
+            }
+          ]
         }
       ]
     },
