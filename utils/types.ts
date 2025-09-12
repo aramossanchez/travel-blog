@@ -5,12 +5,15 @@ export type CarouselItem = {
 };
 
 export type ContentBlock =
-  | { type: "title"; text: string }
-  | { type: "subtitle"; text: string }
   | { type: "primaryTitle"; text: string }
   | { type: "introduction"; text: string }
+  | { type: "image-presentation"; src: string; alt: string }
+  | { type: "title"; text: string }
+  | { type: "subtitle"; text: string }
   | { type: "paragraph"; text: string }
+  | { type: "link"; src: string; text: string }
   | { type: "image"; src: string; alt: string; label: string }
+  | { type: "video"; src: string; alt: string; label: string }
   | { type: "carrousel"; carrousel: CarouselItem[] };
 
 export interface Section {

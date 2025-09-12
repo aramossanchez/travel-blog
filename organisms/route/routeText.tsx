@@ -7,6 +7,7 @@ interface RouteTextOrganismProps {
 }
 
 export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
+  console.log(data);
   const sectionKeys: SectionKey[] = Object.keys(data).filter(
     (key) => key !== "id"
   ) as SectionKey[];

@@ -2,6 +2,8 @@ import HrAtom from "@/atoms/hr";
 import { ContentBlock, SectionKey } from "@/utils/types";
 import Image from "next/image";
 import iconSelector from "./iconSelector";
+import Link from "next/link";
+import ArrowRightIcon from "@/atoms/icons/arrowRight";
 
 interface RouteJsonToHtmlProps {
   data: ContentBlock;
@@ -17,6 +19,17 @@ export default function routeJsonToHtml({
       return <h1>{data.text}</h1>;
     case "introduction":
       return <h2>{data.text}</h2>;
+    case "image-presentation":
+      return (
+        <Image
+          id={data.src}
+          src={data.src}
+          alt={data.alt}
+          width={1000}
+          height={700}
+          className="w-full border-2 border-primaryColor rounded-lg object-cover object-center"
+        />
+      );
     case "title":
       return (
         <header className="space-y-2">
@@ -31,6 +44,21 @@ export default function routeJsonToHtml({
       return <h3>{data.text}</h3>;
     case "paragraph":
       return <p>{data.text}</p>;
+    case "link":
+      return (
+        <p className="group flex flex-row items-center gap-x-1 w-fit">
+          <p className="group-hover:text-primaryColor duration-200 group-hover:pr-3">
+            <ArrowRightIcon size={20} />
+          </p>
+          <Link
+            href={data.src}
+            target="_blank"
+            className="underline hover:text-primaryColor duration-200"
+          >
+            {data.text}
+          </Link>
+        </p>
+      );
     case "image":
       return (
         <div className="space-y-1">
@@ -67,6 +95,24 @@ export default function routeJsonToHtml({
               </div>
             );
           })}
+        </div>
+      );
+    case "video":
+      return (
+        <div className="space-y-1">
+          <iframe
+            className="border-2 border-primaryColor rounded-lg overflow-hidden"
+            id={data.src}
+            width="500"
+            height="300"
+            src={data.src}
+            title={data.alt}
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          <label className="italic" htmlFor={data.src}>
+            · {data.label}
+          </label>
         </div>
       );
     default:

@@ -8,6 +8,11 @@
           "text": "Cuenca"
         },
         {
+          "type": "image-presentation",
+          "src": "/cuenca.avif",
+          "alt": "Foto de Cuenca"
+        },
+        {
           "type": "introduction",
           "text": "Visita express a Cuenca, pasando por todas sus zonas más características en su zona antigua, y descubriendo su zona nueva. Empieza el viaje saliendo en moto desde Valencia, pasando por la A3 sin tomar ningún desvío. Parada en gasolinera para tomar café y repostar y viajar tranquilo."
         }
@@ -78,6 +83,12 @@
         {
           "type": "paragraph",
           "text": "Disfrutamos de un paseo en patines por el parque."
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-patines",
+          "label": "Video del paseo en patines por el parque."
         }
       ]
     },
@@ -89,7 +100,21 @@
         },
         {
           "type": "paragraph",
-          "text": "El hotel fue un lugar acogedor."
+          "text": "El hotel fue el Carlos III, un lugar acogedor y familiar donde encontrar una habitación cómoda, barata y bien situada."
+        },
+        {
+          "type": "subtitle",
+          "text": "Hostal Carlos III"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/5cEsrQgxTd5nfdi98",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://www.nacarahotel.com/?td=b00ga00&referer_code=ADWORDS&gad_source=1&gad_campaignid=624347692&gbraid=0AAAAADtzc6v1jEoicnowUcYYk5flRZZ4R&gclid=CjwKCAjwiY_GBhBEEiwAFaghvut2qvqhaARf78jZVLOf-LelPOUAHI_2VIUZtXD30dtXenlTjtMwvxoCE9EQAvD_BwE",
+          "text": "Enlace a la web del hotel"
         },
         {
           "type": "image",
@@ -111,7 +136,22 @@
         },
         {
           "type": "subtitle",
-          "text": "Comida del día de llegada, en un japonés."
+          "text": "Sakura Itadakimasu"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/u5tVUhKSrCgAD1ei7",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/",
+          "text": "Enlace a la web del restaurante"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/mejor-almuerzo-de-valencia/",
+          "text": "Carta del restaurante"
         },
         {
           "type": "image",
