@@ -14,7 +14,8 @@ export type ContentBlock =
   | { type: "link"; src: string; text: string }
   | { type: "image"; src: string; alt: string; label: string }
   | { type: "video"; src: string; alt: string; label: string }
-  | { type: "carrousel"; carrousel: CarouselItem[] };
+  | { type: "carrousel"; carrousel: CarouselItem[] }
+  | { type: "separator" };
 
 export interface Section {
   content: ContentBlock[];

@@ -18,7 +18,7 @@ export default function routeJsonToHtml({
     case "primaryTitle":
       return <h1>{data.text}</h1>;
     case "introduction":
-      return <h2>{data.text}</h2>;
+      return <p className="text-lg">{data.text}</p>;
     case "image-presentation":
       return (
         <Image
@@ -115,6 +115,8 @@ export default function routeJsonToHtml({
           </label>
         </div>
       );
+    case "separator":
+      return <div className="py-2"></div>;
     default:
       break;
   }
