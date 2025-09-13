@@ -27,7 +27,7 @@ export default function RouteinHomeMolecule({
           alt={title}
           width={800}
           height={400}
-          className="w-full max-h-[200px] sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center"
+          className="w-full max-h-[200px] image-card"
         />
       </Link>
       <p className="text_route_molecule">{text}</p>

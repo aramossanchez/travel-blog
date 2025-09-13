@@ -22,7 +22,7 @@ export default function SectionInHomeMolecule({
           alt={title}
           width={800}
           height={400}
-          className="w-full max-h-[400px] sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center"
+          className="w-full max-h-[400px] image-card"
         />
         <h2>{title}</h2>
       </Link>

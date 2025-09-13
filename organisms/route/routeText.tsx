@@ -7,10 +7,10 @@ interface RouteTextOrganismProps {
 }
 
 export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
-  console.log(data);
   const sectionKeys: SectionKey[] = Object.keys(data).filter(
     (key) => key !== "id"
   ) as SectionKey[];
+
   return (
     <article className="organism space-y-16">
       {sectionKeys.map((key: SectionKey) => {

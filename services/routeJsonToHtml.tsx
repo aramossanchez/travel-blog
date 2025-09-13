@@ -4,6 +4,7 @@ import Image from "next/image";
 import iconSelector from "./iconSelector";
 import Link from "next/link";
 import ArrowRightIcon from "@/atoms/icons/arrowRight";
+import ImageModal from "@/molecules/imageModal";
 
 interface RouteJsonToHtmlProps {
   data: ContentBlock;
@@ -60,39 +61,17 @@ export default function routeJsonToHtml({
         </p>
       );
     case "image":
-      return (
-        <div className="space-y-1">
-          <Image
-            id={data.src}
-            src={data.src}
-            alt={data.alt}
-            width={500}
-            height={300}
-            className="max-w-[500px] max-h-[300px] sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center"
-          />
-          <label className="italic" htmlFor={data.src}>
-            · {data.label}
-          </label>
-        </div>
-      );
+      return <ImageModal data={data} maxSize="max-w-[500px] max-h-[300px]" />;
     case "carrousel":
       return (
         <div className="grid grid-cols-4 gap-4">
           {data.carrousel.map((image) => {
             return (
-              <div key={image.src}>
-                <Image
-                  id={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  width={500}
-                  height={300}
-                  className="min-h-[250px] max-h-[250px] sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center"
-                />
-                <label className="italic" htmlFor={image.src}>
-                  · {image.label}
-                </label>
-              </div>
+              <ImageModal
+                key={image.src}
+                data={image}
+                maxSize="min-h-[250px] max-h-[250px]"
+              />
             );
           })}
         </div>

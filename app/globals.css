@@ -73,3 +73,9 @@ h3 {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@layer components {
+  .image-card {
+    @apply sepia-100 hover:sepia-0 duration-300 cursor-pointer border-2 border-primaryColor rounded-lg object-cover object-center;
+  }
+}
