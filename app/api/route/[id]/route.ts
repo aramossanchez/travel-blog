@@ -5,12 +5,12 @@ import path from "path";
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
-) {
-  const id = (await params).id;
-  const filePath = path.join(process.cwd(), "data", `${id}.json`);
+): Promise<Response> {
+  const id: string = (await params).id;
+  const filePath: string = path.join(process.cwd(), "data", `${id}.json`);
 
   try {
-    const raw = await readFile(filePath, "utf8");
+    const raw: string = await readFile(filePath, "utf8");
     const json = JSON.parse(raw);
     return Response.json(json, { status: 200 });
   } catch (err) {
