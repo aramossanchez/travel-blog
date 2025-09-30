@@ -7,12 +7,15 @@ export default {
     "./organism/**/*.{js,ts,jsx,tsx,mdx}",
     "./molecules/**/*.{js,ts,jsx,tsx,mdx}",
     "./atoms/**/*.{js,ts,jsx,tsx,mdx}",
+    "./services/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        foregroundSecondary: "var(--foregroundSecondary)",
+        primaryColor: "var(--primaryColor)",
       },
     },
   },

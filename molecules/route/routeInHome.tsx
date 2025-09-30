@@ -2,19 +2,21 @@ import LocationIcon from "@/atoms/icons/location";
 import Image from "next/image";
 import Link from "next/link";
 
-interface RouteinHomeMoleculeProps {
+interface RouteInHomeMoleculeProps {
   image?: string;
   title?: string;
   text?: string;
   href?: string;
+  date?: string;
 }
 
-export default function RouteinHomeMolecule({
+export default function RouteInHomeMolecule({
   image = "",
   title = "",
   text = "",
   href = "/route/1234",
-}: RouteinHomeMoleculeProps) {
+  date = "",
+}: RouteInHomeMoleculeProps) {
   return (
     <div className="h-fit flex flex-col gap-y-4">
       <Link href={href} className="flex items-center gap-x-4">
@@ -30,6 +32,7 @@ export default function RouteinHomeMolecule({
           className="w-full max-h-[200px] image-card"
         />
       </Link>
+      <p className="text-foregroundSecondary italic">{date}</p>
       <p className="text_route_molecule">{text}</p>
     </div>
   );

@@ -6,6 +6,7 @@ export type CarouselItem = {
 
 export type ContentBlock =
   | { type: "primaryTitle"; text: string }
+  | { type: "published"; date: string; authors: string[] }
   | { type: "introduction"; text: string }
   | { type: "image-presentation"; src: string; alt: string }
   | { type: "title"; text: string }

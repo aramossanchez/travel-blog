@@ -3,12 +3,14 @@
 :root {
   --background: #eddaad;
   --foreground: #221d16;
+  --foregroundSecondary: #221d16ab;
   --primaryColor: #b89654;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foregroundSecondary: var(--foregroundSecondary);
   --color-primaryColor: var(--primaryColor);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -17,7 +19,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #eddaad;
-    --foreground: #615136;
+    --foreground: #221d16;
+    --foregroundSecondary: #221d165d;
     --primaryColor: #b89654;
   }
 }

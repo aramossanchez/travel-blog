@@ -8,6 +8,11 @@
           "text": "Cuenca"
         },
         {
+          "type": "published",
+          "date": "30 de Septiembre de 2025",
+          "authors": ["Armando"]
+        },
+        {
           "type": "image-presentation",
           "src": "/cuenca.avif",
           "alt": "Foto de Cuenca"
