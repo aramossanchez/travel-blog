@@ -1,5 +1,5 @@
 import HrAtom from "@/atoms/hr";
-import RouteInHomeMolecule from "@/molecules/route/routeInHome";
+import RouteInHomeMolecule from "@/molecules/home/routeInHome";
 
 export default function LastRoutesOrganism() {
   return (

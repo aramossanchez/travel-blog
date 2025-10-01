@@ -3,7 +3,7 @@
 :root {
   --background: #eddaad;
   --foreground: #221d16;
-  --foregroundSecondary: #221d16ab;
+  --foregroundSecondary: #4d4337;
   --primaryColor: #b89654;
 }
 
@@ -23,6 +23,10 @@
     --foregroundSecondary: #221d165d;
     --primaryColor: #b89654;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

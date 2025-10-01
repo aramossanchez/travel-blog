@@ -1,7 +1,6 @@
 "use client";
 
-import ArrowRightIcon from "@/atoms/icons/arrowRight";
-import ChevronRightIcon from "@/atoms/icons/chevronRight";
+import FilledArrowIcon from "@/atoms/icons/filledArrowRight";
 import { CarouselItem } from "@/utils/types";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -35,10 +34,10 @@ export default function SliderImages({ images }: SliderImagesProps) {
   return (
     <div className="w-full h-[60dvw] max-w-full max-h-[60dvw] relative">
       <button className="absolute left-1 top-1/2 z-10 cursor-pointer rotate-180 -translate-y-1/2 bg-foreground rounded-full p-2">
-        <ChevronRightIcon size={40} color="var(--primaryColor)" />
+        <FilledArrowIcon size={40} color="var(--primaryColor)" />
       </button>
       <button className="absolute right-1 top-1/2 z-10 cursor-pointer -translate-y-1/2 bg-foreground rounded-full p-2">
-        <ChevronRightIcon size={40} color="var(--primaryColor)" />
+        <FilledArrowIcon size={40} color="var(--primaryColor)" />
       </button>
       <div
         className="w-full h-[60dvw] max-w-full max-h-[60dvw] flex items-center overflow-scroll"

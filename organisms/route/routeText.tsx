@@ -1,6 +1,10 @@
+import ChevronRightIcon from "@/atoms/icons/chevronRight";
+import DropdownMolecule from "@/molecules/dropdown";
 import SectionInSingleRouteMolecule from "@/molecules/route/sectionInSingleRoute";
+import iconSelector from "@/services/iconSelector";
 import routeJsonToHtml from "@/services/routeJsonToHtml";
 import { RouteDataType, SectionKey } from "@/utils/types";
+import Link from "next/link";
 
 interface RouteTextOrganismProps {
   data: RouteDataType;
@@ -12,7 +16,8 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
   ) as SectionKey[];
 
   return (
-    <article className="organism space-y-16">
+    <article className="organism space-y-16 relative">
+      <DropdownMolecule text="Secciones" dropdownKeys={sectionKeys} icons />
       {sectionKeys.map((key: SectionKey) => {
         if (key === "route") {
           return (

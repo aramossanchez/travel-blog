@@ -3,34 +3,41 @@ import ClimberIcon from "@/atoms/icons/climber";
 import FoodIcon from "@/atoms/icons/food";
 import HikingIcon from "@/atoms/icons/hiking";
 import HomeIcon from "@/atoms/icons/home";
+import LocationIcon from "@/atoms/icons/location";
 import LookForCityIcon from "@/atoms/icons/lookForCity";
 import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import RollerIcon from "@/atoms/icons/roller";
 import { SectionKey } from "@/utils/types";
 
 interface IconSelectorProps {
-  section: SectionKey;
+  section: string;
+  size?: number;
 }
 
-export default function iconSelector({ section }: IconSelectorProps) {
+export default function iconSelector({
+  section,
+  size = 30,
+}: IconSelectorProps) {
   const color = "var(--primaryColor)";
   switch (section) {
+    case "route":
+      return <LocationIcon size={size} color={color} />;
     case "travel":
-      return <MotorcycleIcon color={color} />;
+      return <MotorcycleIcon size={size} color={color} />;
     case "freetour":
-      return <LookForCityIcon color={color} />;
+      return <LookForCityIcon size={size} color={color} />;
     case "sleep":
-      return <BedIcon color={color} />;
+      return <BedIcon size={size} color={color} />;
     case "hiking":
-      return <HikingIcon color={color} />;
+      return <HikingIcon size={size} color={color} />;
     case "climb":
-      return <ClimberIcon color={color} />;
+      return <ClimberIcon size={size} color={color} />;
     case "roller":
-      return <RollerIcon color={color} />;
+      return <RollerIcon size={size} color={color} />;
     case "eat":
-      return <FoodIcon color={color} />;
+      return <FoodIcon size={size} color={color} />;
     case "return":
-      return <HomeIcon color={color} />;
+      return <HomeIcon size={size} color={color} />;
     default:
       return null;
   }
