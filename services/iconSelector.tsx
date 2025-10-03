@@ -7,7 +7,6 @@ import LocationIcon from "@/atoms/icons/location";
 import LookForCityIcon from "@/atoms/icons/lookForCity";
 import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import RollerIcon from "@/atoms/icons/roller";
-import { SectionKey } from "@/utils/types";
 
 interface IconSelectorProps {
   section: string;

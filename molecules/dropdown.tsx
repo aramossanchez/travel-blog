@@ -1,9 +1,10 @@
 "use client";
 
 import ChevronRightIcon from "@/atoms/icons/chevronRight";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import iconSelector from "@/services/iconSelector";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface DropdownMoleculeProps {
   text: string;
@@ -17,6 +18,9 @@ export default function DropdownMolecule({
   icons = false,
 }: DropdownMoleculeProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  useClickOutside(dropdownRef, () => setIsOpen(false));
+
   const iconButtonStyle = isOpen ? "rotate-270" : "rotate-90";
   const dropdownStyle = isOpen
     ? "top-[120%] opacity-100 pointer-events-auto max-h-96"
@@ -24,7 +28,10 @@ export default function DropdownMolecule({
 
   return (
     <section className="sticky top-0 w-full flex justify-end z-50">
-      <div className="flex flex-col items-end gap-y-2 w-fit relative">
+      <div
+        className="flex flex-col items-end gap-y-2 w-fit relative"
+        ref={dropdownRef}
+      >
         <button
           className="text-background px-4 py-2 rounded-md flex flex-row items-center gap-x-10 cursor-pointer bg-foreground"
           onClick={() => setIsOpen(!isOpen)}
