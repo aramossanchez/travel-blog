@@ -1,13 +1,15 @@
+import { Locale } from "@/utils/types";
 import { readFile } from "fs/promises";
 import { NextRequest } from "next/server";
 import path from "path";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string; locale: Locale }> }
 ): Promise<Response> {
-  const id: string = (await params).id;
-  const filePath: string = path.join(process.cwd(), "data", `${id}.json`);
+  const { id, locale } = await params;
+  const url = `/${locale}/${id}.json`;
+  const filePath: string = path.join(process.cwd(), "data", url);
 
   try {
     const raw: string = await readFile(filePath, "utf8");

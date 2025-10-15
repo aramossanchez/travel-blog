@@ -3,20 +3,25 @@
 import ChevronRightIcon from "@/atoms/icons/chevronRight";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import iconSelector from "@/services/iconSelector";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 interface DropdownMoleculeProps {
   text: string;
   dropdownKeys: string[];
   icons?: boolean;
+  gapInButton?: string;
 }
 
 export default function DropdownMolecule({
   text,
   dropdownKeys,
   icons = false,
+  gapInButton = "20",
 }: DropdownMoleculeProps) {
+  const t = useTranslations("Route");
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   useClickOutside(dropdownRef, () => setIsOpen(false));
@@ -33,7 +38,8 @@ export default function DropdownMolecule({
         ref={dropdownRef}
       >
         <button
-          className="text-background px-4 py-2 rounded-md flex flex-row items-center gap-x-10 cursor-pointer bg-foreground"
+          className="text-background px-4 py-2 rounded-md flex flex-row items-center cursor-pointer bg-foreground"
+          style={{ gap: `${gapInButton}px` }}
           onClick={() => setIsOpen(!isOpen)}
         >
           <span>{text}</span>
@@ -48,16 +54,15 @@ export default function DropdownMolecule({
         >
           {dropdownKeys.map((key: string) => {
             return (
-              <>
+              <Fragment key={`footer-${key}`}>
                 <Link
                   href={`#${key}`}
-                  key={`footer-${key}`}
                   className="bg-foreground text-background hover:bg-foregroundSecondary px-4 flex items-center gap-x-4 py-2"
                 >
                   {icons && iconSelector({ section: key, size: 20 })}
-                  <span className="capitalize">{key}</span>
+                  <p className="whitespace-nowrap">{t(key)}</p>
                 </Link>
-              </>
+              </Fragment>
             );
           })}
         </div>

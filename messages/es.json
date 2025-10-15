@@ -2,5 +2,17 @@
   "Home": {
     "title": "Hola mundo",
     "cta": "Ver más"
+  },
+  "Route": {
+    "Sections": "Secciones",
+    "route": "Ruta",
+    "travel": "Viaje de ida",
+    "freetour": "Free tour",
+    "hiking": "Senderismo",
+    "climb": "Escalada",
+    "roller": "Ruta en patines",
+    "sleep": "Alojamiento",
+    "eat": "Comida",
+    "return": "Viaje de vuelta"
   }
 }

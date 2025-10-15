@@ -4,6 +4,8 @@ export type CarouselItem = {
   label: string;
 };
 
+export type Locale = "es" | "en" | "va";
+
 export type ContentBlock =
   | { type: "primaryTitle"; text: string }
   | { type: "published"; date: string; authors: string[] }

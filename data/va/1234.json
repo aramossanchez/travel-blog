@@ -1,0 +1,371 @@
+[
+  {
+    "id": "1234",
+    "route": {
+      "content": [
+        {
+          "type": "primaryTitle",
+          "text": "Traducir al valenciano"
+        },
+        {
+          "type": "published",
+          "date": "30 de Septiembre de 2025",
+          "authors": ["Armando"]
+        },
+        {
+          "type": "image-presentation",
+          "src": "/cuenca.avif",
+          "alt": "Foto de Cuenca"
+        },
+        {
+          "type": "introduction",
+          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. Destaca su catedral de estilo gótico, uno de los primeros templos de este estilo en España. La ciudad combina tradición y modernidad con museos como el de Arte Abstracto Español. Rodeada de naturaleza, es también punto de partida para rutas por la Serranía de Cuenca. Un destino que mezcla historia, cultura y paisajes únicos."
+        }
+      ]
+    },
+    "travel": {
+      "content": [
+        {
+          "type": "title",
+          "text": "De Valencia a Cuenca"
+        },
+        {
+          "type": "paragraph",
+          "text": "Salir en moto desde Valencia hacia Cuenca es una experiencia que combina costa y montaña en pocas horas de trayecto. La ruta más habitual comienza tomando la A-3 en dirección Madrid, pero pronto se recomienda desviarse hacia carreteras secundarias, como la CV-35 o la N-330, que permiten disfrutar de un recorrido más pintoresco y menos transitado. Desde el inicio, se percibe la transición del paisaje mediterráneo, con naranjos y llanuras, hacia zonas más montañosas y frescas."
+        },
+        {
+          "type": "paragraph",
+          "text": "A medida que la moto avanza, el terreno se vuelve sinuoso y los puertos de montaña aparecen como protagonistas. Pasar por pueblos como Requena, Utiel o Mira da la oportunidad de detenerse, descansar y descubrir la gastronomía local, desde vinos con denominación de origen hasta platos tradicionales. Las curvas continuas, unidas a tramos rodeados de bosques y miradores naturales, hacen del trayecto un auténtico placer para cualquier motorista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Finalmente, al llegar a Cuenca, el esfuerzo se ve recompensado por la visión de la ciudad antigua, colgada sobre las hoces del Júcar y el Huécar. Aparcar la moto y recorrer sus calles empedradas, descubrir la Catedral, las Casas Colgadas y los miradores que dominan el paisaje es la guinda de la aventura. El viaje no solo es un desplazamiento entre dos ciudades, sino una inmersión en la diversidad de paisajes, cultura e historia que ofrece el interior de España."
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-return",
+          "label": "Video completo de la ida a Cuenca en moto."
+        }
+      ]
+    },
+    "freetour": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Free tour por la ciudad"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un free tour por Cuenca suele comenzar en la Plaza Mayor, corazón del casco histórico y punto perfecto para adentrarse en la ciudad medieval. Desde allí, el guía introduce la historia de la Catedral de Santa María y San Julián, uno de los templos góticos más antiguos de España, y conduce a los visitantes por callejuelas estrechas y empedradas que muestran la esencia de una ciudad fortaleza levantada entre las hoces del Júcar y del Huécar."
+        },
+        {
+          "type": "paragraph",
+          "text": "El recorrido continúa hacia las famosas Casas Colgadas, emblema de Cuenca, suspendidas sobre el abismo y hoy sede del Museo de Arte Abstracto Español. A lo largo del camino se descubren miradores espectaculares, historias de caballeros medievales y anécdotas locales. El tour suele finalizar en el Puente de San Pablo, desde donde se obtiene una de las vistas más icónicas de la ciudad, uniendo patrimonio, cultura y paisaje en un paseo inolvidable."
+        }
+      ]
+    },
+    "hiking": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Ruta de senderismo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una de las rutas de senderismo más recomendables en los alrededores de Cuenca es la que recorre la Hoz del Huécar, un itinerario que combina naturaleza, patrimonio y unas vistas espectaculares de la ciudad. El punto de partida suele ser el mismo casco antiguo, lo que permite iniciar el recorrido sin necesidad de grandes desplazamientos. Desde allí, se toma el camino que desciende hacia el curso del río, rodeado de paredes rocosas y vegetación abundante."
+        },
+        {
+          "type": "paragraph",
+          "text": "El sendero está bien señalizado y discurre entre pinares y chopos, siguiendo de cerca el cauce del Huécar. A cada paso, el contraste entre el verde de la naturaleza y el ocre de las rocas crea un paisaje único. Además, los tramos más estrechos de la hoz ofrecen una atmósfera fresca y tranquila, ideal para disfrutar en cualquier época del año, aunque especialmente agradable en primavera y otoño."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mitad de la ruta, el caminante se encuentra con varios miradores naturales desde los que se contemplan las famosas Casas Colgadas y la silueta de la Catedral, enclavadas sobre los riscos. Este punto invita a hacer una pausa y disfrutar de la panorámica, que combina la fuerza de la naturaleza con la obra del ser humano. Es también un momento perfecto para tomar fotografías o simplemente dejarse impresionar por la armonía del entorno."
+        },
+        {
+          "type": "paragraph",
+          "text": "El recorrido finaliza ascendiendo de nuevo hacia el casco histórico, cerrando un circuito que dura entre dos y tres horas, dependiendo del ritmo. Es una ruta de dificultad moderada, accesible para la mayoría de senderistas, y que resume en pocos kilómetros la esencia de Cuenca: un equilibrio entre ciudad medieval, montañas escarpadas y ríos que esculpen un paisaje singular. Sin duda, una experiencia imprescindible para quienes visitan la zona."
+        }
+      ]
+    },
+    "climb": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Rocódromo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Visitar un rocódromo en Cuenca es una experiencia emocionante para quienes buscan aventura en un entorno seguro y controlado. Tanto principiantes como escaladores experimentados pueden disfrutar de muros con diferentes niveles de dificultad, diseñados para poner a prueba la resistencia, la técnica y la confianza. Los instructores locales ofrecen consejos y apoyo, lo que convierte la actividad en una oportunidad perfecta para aprender o perfeccionar la escalada. Además, al estar en una ciudad con tanta tradición montañera, el ambiente suele ser cercano y motivador, ideal para compartir la pasión por la escalada antes de lanzarse a las paredes naturales de la Serranía conquense."
+        }
+      ]
+    },
+    "roller": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Paseo en patines"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hacer una ruta en patines por Cuenca es una forma divertida y diferente de descubrir la ciudad moderna y sus alrededores. El recorrido más recomendable comienza en la zona baja de la ciudad, en espacios más llanos como el Parque de los Moralejos o la ribera del río Júcar, donde los caminos pavimentados y anchos permiten patinar con comodidad y seguridad. Allí, entre naturaleza y tramos urbanos, se disfruta de un ambiente relajado, perfecto tanto para principiantes como para quienes buscan deslizarse a buen ritmo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Desde este punto, la ruta puede extenderse siguiendo el paseo fluvial del Júcar, que ofrece tramos largos y rectos ideales para mantener velocidad mientras se contempla el paisaje. A lo largo del camino aparecen zonas de descanso, áreas verdes y vistas de los puentes y murallas que recuerdan la historia de la ciudad. Es un plan perfecto para combinar deporte, ocio y turismo activo, con la ventaja de recorrer Cuenca desde una perspectiva diferente y dinámica."
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-patines",
+          "label": "Video del paseo en patines por el parque."
+        }
+      ]
+    },
+    "sleep": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Hotel muy crema"
+        },
+        {
+          "type": "subtitle",
+          "text": "Hostal Carlos III"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/5cEsrQgxTd5nfdi98",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://www.nacarahotel.com/?td=b00ga00&referer_code=ADWORDS&gad_source=1&gad_campaignid=624347692&gbraid=0AAAAADtzc6v1jEoicnowUcYYk5flRZZ4R&gclid=CjwKCAjwiY_GBhBEEiwAFaghvut2qvqhaARf78jZVLOf-LelPOUAHI_2VIUZtXD30dtXenlTjtMwvxoCE9EQAvD_BwE",
+          "text": "Enlace a la web del hotel"
+        },
+        {
+          "type": "image",
+          "src": "/casa.webp",
+          "alt": "Foto de la casa rural",
+          "label": "Foto de la casa rural donde me alojé en Cuenca durante 3 días."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alojarse en un hotel de Cuenca viajando solo es una experiencia que combina comodidad y descubrimiento personal. Desde la llegada, el ambiente acogedor del personal hace sentir al huésped como en casa, ofreciendo recomendaciones personalizadas sobre qué ver y dónde comer. La habitación, tranquila y bien equipada, se convierte en un refugio perfecto tras un día explorando la ciudad, con detalles como vistas al casco histórico o a las hoces que añaden un toque especial a la estancia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante el día, el hotel sirve como punto de partida ideal para recorrer Cuenca a pie. Tras un buen desayuno, es fácil llegar a lugares emblemáticos como la Catedral, las Casas Colgadas o el Puente de San Pablo. Viajar solo permite marcar el propio ritmo, parando en cafés, museos o miradores según el momento lo inspire. El regreso al hotel al caer la tarde transmite una sensación de descanso merecido y de calma tras la actividad."
+        },
+        {
+          "type": "paragraph",
+          "text": "La experiencia se completa con pequeños momentos de conexión. En las zonas comunes, como la cafetería o la terraza, es posible entablar conversación con otros viajeros, compartir experiencias y recibir consejos sobre rutas o actividades. Así, alojarse en un hotel de Cuenca en solitario no es solo descansar, sino también disfrutar de la libertad de un viaje personal, con la posibilidad de encontrar compañía inesperada en un entorno inspirador."
+        }
+      ]
+    },
+    "eat": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Qué es lo que comí"
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante la jornada en Cuenca, cada comida se convirtió en parte esencial de la experiencia del viaje. El día comenzó con un desayuno sencillo pero lleno de encanto en una cafetería del casco antiguo, seguido de una comida tradicional en un restaurante cercano a la Plaza Mayor, donde la cocina conquense brilló en todo su esplendor. Para cerrar, la cena tuvo lugar en un espacio moderno en la parte baja de la ciudad, donde la fusión de sabores y el ambiente relajado pusieron el broche final perfecto a la jornada."
+        },
+        {
+          "type": "subtitle",
+          "text": "Cafetería Valor"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/u5tVUhKSrCgAD1ei7",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/",
+          "text": "Enlace a la web del restaurante"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/mejor-almuerzo-de-valencia/",
+          "text": "Carta del restaurante"
+        },
+        {
+          "type": "image",
+          "src": "/cafeteria.jpg",
+          "alt": "Foto de la cafetería",
+          "label": "Foto de la cafetería donde desayuné en Cuenca."
+        },
+        {
+          "type": "paragraph",
+          "text": "El lugar elegido para desayunar fue una pequeña cafetería del casco antiguo, con mesas de madera y un ambiente familiar. Allí, el aroma del café recién hecho se mezclaba con el de la repostería casera, y el viajero pudo disfrutar de unas tostadas crujientes con tomate y aceite, acompañadas de un zumo de naranja natural, perfecto para empezar el día con energía antes de recorrer Cuenca."
+        },
+        {
+          "type": "carrousel",
+          "carrousel": [
+            {
+              "src": "/tostadas.jpg",
+              "alt": "comida-1",
+              "label": "Tostadas deliciosas"
+            },
+            {
+              "src": "/tarta.jpeg",
+              "alt": "comida-2",
+              "label": "Tarta deliciosa"
+            }
+          ]
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "subtitle",
+          "text": "Asador Manuel"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/u5tVUhKSrCgAD1ei7",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/",
+          "text": "Enlace a la web del restaurante"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/mejor-almuerzo-de-valencia/",
+          "text": "Carta del restaurante"
+        },
+        {
+          "type": "image",
+          "src": "/asador.jpg",
+          "alt": "Foto del asador",
+          "label": "Foto del asador donde comí en Cuenca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para la comida, la elección fue un restaurante tradicional cercano a la Plaza Mayor. El menú incluía platos típicos de la zona, como el morteruelo, una receta contundente y llena de sabor que refleja la esencia manchega. La atención cercana de los camareros y la decoración rústica del local, con vigas de madera y paredes de piedra, ayudaron a crear una experiencia auténtica y acogedora."
+        },
+        {
+          "type": "paragraph",
+          "text": "El segundo plato fue aún más sorprendente: un asado de cordero tierno, acompañado de vino con Denominación de Origen La Mancha. Cada bocado confirmaba el vínculo entre la gastronomía local y su entorno, transmitiendo la tradición de generaciones. La sobremesa, larga y tranquila, permitió al viajero relajarse y disfrutar del ritmo pausado de la ciudad."
+        },
+        {
+          "type": "carrousel",
+          "carrousel": [
+            {
+              "src": "/plato1.jpg",
+              "alt": "comida-1",
+              "label": "Plato 1 buenísimo"
+            },
+            {
+              "src": "/plato2.jpg",
+              "alt": "comida-2",
+              "label": "Plato 2 increíble"
+            },
+            {
+              "src": "/plato3.jpg",
+              "alt": "comida-3",
+              "label": "Plato 3 impresionante"
+            }
+          ]
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "subtitle",
+          "text": "Sakura Itadakimasu"
+        },
+        {
+          "type": "link",
+          "src": "https://maps.app.goo.gl/u5tVUhKSrCgAD1ei7",
+          "text": "Enlace a Google Maps"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/",
+          "text": "Enlace a la web del restaurante"
+        },
+        {
+          "type": "link",
+          "src": "https://barrexat.com/mejor-almuerzo-de-valencia/",
+          "text": "Carta del restaurante"
+        },
+        {
+          "type": "image",
+          "src": "/restaurante-japones.jpg",
+          "alt": "Foto del restaurante japonés",
+          "label": "Foto del restaurante japonés donde comí en Cuenca."
+        },
+        {
+          "type": "paragraph",
+          "text": "La cena tuvo lugar en un restaurante más moderno, ubicado en la parte baja de Cuenca, donde la propuesta gastronómica mezclaba tradición e innovación. El ambiente era más cosmopolita, con una iluminación cálida y música suave que invitaba a quedarse. Como entrante, una crema de calabaza con un toque de jengibre aportó frescura y ligereza tras el día intenso."
+        },
+        {
+          "type": "paragraph",
+          "text": "El plato principal fue un lomo de trucha conquense con guarnición de verduras, preparado con una presentación cuidada y sabores equilibrados. La cena, acompañada por una copa de vino blanco fresco, se convirtió en el cierre perfecto de la jornada. Antes de marcharse, un postre ligero de queso manchego con miel selló la experiencia, dejando una sensación de satisfacción completa y el deseo de volver."
+        },
+        {
+          "type": "carrousel",
+          "carrousel": [
+            {
+              "src": "/ramen.jpg",
+              "alt": "comida-1",
+              "label": "Ramen buenísimo"
+            },
+            {
+              "src": "/sushi.webp",
+              "alt": "comida-2",
+              "label": "Sushi increíble"
+            },
+            {
+              "src": "/takoyaki.png",
+              "alt": "comida-3",
+              "label": "Takoyaki impresionante"
+            },
+            {
+              "src": "/gyoza.jpg",
+              "alt": "comida-4",
+              "label": "Gyozas deliciosas"
+            },
+            {
+              "src": "/mochi.jpg",
+              "alt": "comida-5",
+              "label": "Mochis de locura"
+            }
+          ]
+        }
+      ]
+    },
+    "return": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Regreso a Valencia"
+        },
+        {
+          "type": "paragraph",
+          "text": "El viaje de vuelta en moto desde Cuenca hacia Valencia comienza con la emoción de abandonar el casco histórico, descendiendo por las hoces del Júcar entre curvas pronunciadas y paredes de roca que despiden al viajero con un paisaje majestuoso. La carretera, tranquila en las primeras horas del día, permite disfrutar del frescor matutino y de la sensación de libertad que ofrece la moto al atravesar la Serranía conquense."
+        },
+        {
+          "type": "paragraph",
+          "text": "A medida que se avanza, la ruta enlaza carreteras secundarias que atraviesan pequeños pueblos, donde se mezclan campos de viñedos y llanuras abiertas. El contraste entre las curvas de montaña y los tramos rectos del altiplano convierte el recorrido en un viaje variado y entretenido, ideal para detenerse en algún mirador o estación de servicio y estirar las piernas mientras se observa el horizonte que se va abriendo hacia el Mediterráneo."
+        },
+        {
+          "type": "paragraph",
+          "text": "La llegada a la Comunidad Valenciana se siente poco a poco en el cambio del paisaje: los pinares dan paso a los naranjales, y el aire se vuelve más cálido y húmedo. Tras varias horas de carretera, el viajero entra en Valencia con la satisfacción de haber disfrutado no solo de un trayecto, sino de una experiencia completa de moto, paisaje y libertad. La sensación final es la de regresar a casa con la memoria cargada de imágenes y curvas inolvidables."
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-return",
+          "label": "Video completo del regreso a Valencia en moto."
+        }
+      ]
+    }
+  }
+]

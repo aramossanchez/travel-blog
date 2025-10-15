@@ -5,6 +5,7 @@ import HeaderOrganism from "@/organisms/header/header";
 import FooterOrganism from "@/organisms/footer/footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Locale } from "@/utils/types";
 
 const merriWeather = Merriweather({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -22,15 +23,15 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: "es" | "en" | "va" }>;
+  params: { locale: Locale };
 }>) {
-  const messages = await getMessages();
   const { locale } = await params;
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
       <body className={`${merriWeather.className}`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <HeaderOrganism />
           {children}
           <FooterOrganism />
