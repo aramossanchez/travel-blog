@@ -4,6 +4,19 @@
     "cta": "Ver más"
   },
   "Route": {
-    "Sections": "Seccions"
+    "Sections": "Seccions",
+    "route": "Ruta",
+    "travel": "Viatge d'anada",
+    "freetour": "Free tour",
+    "hiking": "Senderisme",
+    "climb": "Escalada",
+    "roller": "Ruta en patins",
+    "sleep": "Allotjament",
+    "eat": "Menjar",
+    "return": "Viatge de tornada"
+  },
+  "NewBlog": {
+    "title": "Crear una nova entrada de blog",
+    "description": "Utilitza aquest formulari per crear una nova entrada de blog sobre les teves aventures de viatge."
   }
 }

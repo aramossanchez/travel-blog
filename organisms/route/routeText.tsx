@@ -23,7 +23,7 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
         text={t("Sections")}
         dropdownKeys={sectionKeys}
         icons
-        gapInButton="80"
+        gapInButton="110"
       />
       {sectionKeys.map((key: SectionKey) => {
         if (key === "route") {

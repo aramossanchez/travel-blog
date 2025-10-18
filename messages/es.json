@@ -14,5 +14,9 @@
     "sleep": "Alojamiento",
     "eat": "Comida",
     "return": "Viaje de vuelta"
+  },
+  "NewBlog": {
+    "title": "Crear una nueva entrada de blog",
+    "description": "Utiliza este formulario para crear una nueva entrada de blog sobre tus aventuras de viaje."
   }
 }

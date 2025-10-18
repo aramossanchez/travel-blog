@@ -4,6 +4,19 @@
     "cta": "Ver más"
   },
   "Route": {
-    "Sections": "Sections"
+    "Sections": "Sections",
+    "route": "Route",
+    "travel": "Outbound trip",
+    "freetour": "Free tour",
+    "hiking": "Hiking",
+    "climb": "Climbing",
+    "roller": "Roller skating route",
+    "sleep": "Accommodation",
+    "eat": "Food",
+    "return": "Return trip"
+  },
+  "NewBlog": {
+    "title": "Create a new blog post",
+    "description": "Use this form to create a new blog post for your travel adventures."
   }
 }
