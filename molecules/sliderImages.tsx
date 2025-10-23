@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 interface SliderImagesProps {
   images: CarouselItem[];
 }
-// HE PENSADO QUE HAY QUE GENERAR 3 CUADROS (PASADO, PRESENTE Y FUTURO) Y ASIGNAR QUE IMAGEN TOCA VER EN CADA CUADRO (PENDIENTE DE INVESTIGAR COMO HACER OPTIMO EL SLIDER DE IMAGENES)
+// LAS FLECHAS SUMARÁN O RESTARÁN 1. SE MOSTRARÁ LA IMAGEN SEGÚN EL ÍNDICE ACTUAL. AL IRSE LA IMAGEN PULSANDO LA FLECHA MOSTRARÁ UNA ANIMACIÓN EN FUNCIÓN DE LA DIRECCIÓN PULSADA.
 export default function SliderImages({ images }: SliderImagesProps) {
   const [actualScroll, setActualScroll] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement>(null);
