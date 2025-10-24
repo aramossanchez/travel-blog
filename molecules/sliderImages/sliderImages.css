@@ -1,0 +1,25 @@
+.animated-image {
+  animation: movingImage 0.25s ease-in-out forwards;
+}
+
+.animated-image-reverse {
+  animation: movingImageReverse 0.25s ease-in-out forwards;
+}
+
+@keyframes movingImage {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes movingImageReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

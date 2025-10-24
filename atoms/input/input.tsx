@@ -24,7 +24,7 @@ export default function InputAtom({ id, label, placeholder }: InputAtomProps) {
           className="clear w-[300px] focus:outline-primaryColor rounded-md px-2 py-1 text-sm placeholder:text-foreground/60 font-semibold"
         />
         <Button onClick={() => console.log("Clear input")} state="empty">
-          <CrossIcon size={20} color="red" />
+          <CrossIcon size={16} color="red" />
         </Button>
       </div>
     </div>

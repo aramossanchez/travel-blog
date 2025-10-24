@@ -5,7 +5,7 @@ import iconSelector from "./iconSelector";
 import Link from "next/link";
 import ArrowRightIcon from "@/atoms/icons/arrowRight";
 import ImageModal from "@/molecules/imageModal";
-import SliderImages from "@/molecules/sliderImages";
+import SliderImages from "@/molecules/sliderImages/sliderImages";
 import { Fragment } from "react";
 
 interface RouteJsonToHtmlProps {
