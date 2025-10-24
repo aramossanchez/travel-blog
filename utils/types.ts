@@ -36,5 +36,5 @@ export type SectionKey =
   | "return";
 
 export type RouteDataType = { id: string } & {
-  [K in SectionKey]: Section;
+  [K in SectionKey]?: Section;
 };

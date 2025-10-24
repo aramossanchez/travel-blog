@@ -7,19 +7,22 @@ import PlusIcon from "@/atoms/icons/plus";
 import TrashIcon from "@/atoms/icons/trash";
 import InputAtom from "@/atoms/input/input";
 import React, { useEffect, useState } from "react";
+import CreateRouteSectionMolecule from "../../../molecules/newBlog/createRouteSection/createRouteSection";
+import { useFinalJson } from "../finalJsonProvider/finalJsonProvider";
 
-export default function JsonPrettifyMolecule({
+export default function JsonPrettifyOrganism({
   jsonPrettify,
 }: {
   jsonPrettify: string[];
 }) {
-  const [finalJson, setFinalJson] = useState({
-    id: Math.random().toString(36).substring(2, 9),
-  });
+  const { finalJson, setFinalJson } = useFinalJson();
   const [showJson, setShowJson] = useState<boolean>(false);
 
   useEffect(() => {
-    if (jsonPrettify.includes("route")) {
+    if (
+      jsonPrettify.includes("route") &&
+      !Object.keys(finalJson).find((key) => key === "route")
+    ) {
       setFinalJson((prev) => ({
         ...prev,
         route: {
@@ -57,6 +60,10 @@ export default function JsonPrettifyMolecule({
     }
   }, [jsonPrettify]);
 
+  // useEffect(() => {
+  //   console.log(finalJson);
+  // }, [finalJson]);
+
   return (
     <section className="bg-white w-full border border-foreground rounded-md p-4 space-y-4">
       <div className="flex items-center gap-x-4">
@@ -79,59 +86,11 @@ export default function JsonPrettifyMolecule({
         switch (section) {
           case "route":
             return (
-              <div
-                className="flex flex-col gap-y-4"
+              <CreateRouteSectionMolecule
                 key={section + "-" + index}
-              >
-                <HrAtom />
-                <div className="flex items-center gap-x-4">
-                  <p className="text-xl">Sección {section}</p>
-                  <Button onClick={() => console.log("Agregar algo")}>
-                    <Button.Icon>
-                      <TrashIcon size={20} />
-                    </Button.Icon>
-                    <Button.Text>Quitar sección</Button.Text>
-                  </Button>
-                </div>
-                <HrAtom />
-                <div className="flex flex-col gap-4 flex-wrap">
-                  <InputAtom
-                    id="travel-title"
-                    label="Título principal"
-                    placeholder="Cuenca bonita"
-                  />
-                  <InputAtom
-                    id="travel-date"
-                    label="Fecha en que se ha publicado"
-                    placeholder="30 de Septiembre de 2025"
-                  />
-                  <InputAtom
-                    id="travel-authors"
-                    label="Autores"
-                    placeholder="Armando,Mario,Manolo,Carmen"
-                  />
-                  <InputAtom
-                    id="travel-src-image"
-                    label="Imagen de presentación"
-                    placeholder="/cuenca.avif"
-                  />
-                  <InputAtom
-                    id="travel-alt-image"
-                    label="Texto alternativo de la imagen"
-                    placeholder="Foto de Cuenca con casas colgantes"
-                  />
-                  <Button onClick={() => console.log("Agregar algo")}>
-                    <Button.Icon>
-                      <PlusIcon size={20} />
-                    </Button.Icon>
-                    <Button.Text>
-                      Añadir introduction (texto de introducción)
-                    </Button.Text>
-                  </Button>
-                </div>
-                <div></div>
-                <HrAtom />
-              </div>
+                section={section}
+                index={index}
+              />
             );
           case "travel":
             return (
@@ -140,7 +99,7 @@ export default function JsonPrettifyMolecule({
                 key={section + "-" + index}
               >
                 <HrAtom />
-                <div className="flex items-center gap-x-4">
+                <div className="flex items-center justify-between">
                   <p className="text-xl">Sección {section}</p>
                   <Button onClick={() => console.log("Agregar algo")}>
                     <Button.Icon>
@@ -170,7 +129,6 @@ export default function JsonPrettifyMolecule({
                   </Button>
                 </div>
                 <div></div>
-                <HrAtom />
               </div>
             );
           default:

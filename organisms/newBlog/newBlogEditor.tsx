@@ -2,9 +2,10 @@
 
 import Button from "@/atoms/button/button";
 import PlusIcon from "@/atoms/icons/plus";
-import JsonPrettifyMolecule from "@/molecules/newBlog/jsonPrettify/jsonPrettify";
+import JsonPrettifyOrganism from "@/organisms/newBlog/jsonPrettify/jsonPrettify";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { FinalJsonProvider } from "./finalJsonProvider/finalJsonProvider";
 
 export default function NewBlogEditorOrganism() {
   const t = useTranslations("NewBlog");
@@ -36,7 +37,9 @@ export default function NewBlogEditorOrganism() {
           </Button>
         </div>
       </section>
-      <JsonPrettifyMolecule jsonPrettify={jsonPrettify} />
+      <FinalJsonProvider>
+        <JsonPrettifyOrganism jsonPrettify={jsonPrettify} />
+      </FinalJsonProvider>
     </article>
   );
 }
