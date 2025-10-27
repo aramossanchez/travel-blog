@@ -1,26 +1,24 @@
 import Button from "@/atoms/button/button";
-import HrAtom from "@/atoms/hr";
 import CopyIcon from "@/atoms/icons/copy";
 import EyeIcon from "@/atoms/icons/eye";
 import EyeSlashIcon from "@/atoms/icons/eyeSlash";
-import PlusIcon from "@/atoms/icons/plus";
-import TrashIcon from "@/atoms/icons/trash";
-import InputAtom from "@/atoms/input/input";
 import React, { useEffect, useState } from "react";
-import CreateRouteSectionMolecule from "../../../molecules/newBlog/createRouteSection/createRouteSection";
-import { useFinalJson } from "../finalJsonProvider/finalJsonProvider";
+import CreateRouteSectionMolecule from "../createRouteSection/createRouteSection";
+import { useFinalJson } from "../../../organisms/newBlog/finalJsonProvider/finalJsonProvider";
+import CreateTravelSectionMolecule from "../createTravelSection/createTravelSection";
+import CreateFreetourSectionMolecule from "../createFreetourSection/createFreetourSection";
 
-export default function JsonPrettifyOrganism({
-  jsonPrettify,
+export default function JsonFormMolecule({
+  sectionsInFinalJson,
 }: {
-  jsonPrettify: string[];
+  sectionsInFinalJson: string[];
 }) {
   const { finalJson, setFinalJson } = useFinalJson();
   const [showJson, setShowJson] = useState<boolean>(false);
 
   useEffect(() => {
     if (
-      jsonPrettify.includes("route") &&
+      sectionsInFinalJson.includes("route") &&
       !Object.keys(finalJson).find((key) => key === "route")
     ) {
       setFinalJson((prev) => ({
@@ -45,7 +43,10 @@ export default function JsonPrettifyOrganism({
         },
       }));
     }
-    if (jsonPrettify.includes("travel")) {
+    if (
+      sectionsInFinalJson.includes("travel") &&
+      !Object.keys(finalJson).find((key) => key === "travel")
+    ) {
       setFinalJson((prev) => ({
         ...prev,
         travel: {
@@ -58,11 +59,23 @@ export default function JsonPrettifyOrganism({
         },
       }));
     }
-  }, [jsonPrettify]);
-
-  // useEffect(() => {
-  //   console.log(finalJson);
-  // }, [finalJson]);
+    if (
+      sectionsInFinalJson.includes("freetour") &&
+      !Object.keys(finalJson).find((key) => key === "freetour")
+    ) {
+      setFinalJson((prev) => ({
+        ...prev,
+        freetour: {
+          content: [
+            {
+              type: "title",
+              text: "",
+            },
+          ],
+        },
+      }));
+    }
+  }, [sectionsInFinalJson]);
 
   return (
     <section className="bg-white w-full border border-foreground rounded-md p-4 space-y-4">
@@ -82,7 +95,7 @@ export default function JsonPrettifyOrganism({
         </Button>
       </div>
       {showJson && <div>{JSON.stringify(finalJson, null, 2)}</div>}
-      {jsonPrettify.map((section: string, index: number) => {
+      {sectionsInFinalJson.map((section: string, index: number) => {
         switch (section) {
           case "route":
             return (
@@ -94,42 +107,19 @@ export default function JsonPrettifyOrganism({
             );
           case "travel":
             return (
-              <div
-                className="flex flex-col gap-y-4"
+              <CreateTravelSectionMolecule
                 key={section + "-" + index}
-              >
-                <HrAtom />
-                <div className="flex items-center justify-between">
-                  <p className="text-xl">Sección {section}</p>
-                  <Button onClick={() => console.log("Agregar algo")}>
-                    <Button.Icon>
-                      <TrashIcon size={20} />
-                    </Button.Icon>
-                    <Button.Text>Quitar sección</Button.Text>
-                  </Button>
-                </div>
-                <HrAtom />
-                <div className="flex flex-col gap-4 flex-wrap">
-                  <InputAtom
-                    id="travel-title"
-                    label="Título de la sección Viaje de ida"
-                    placeholder="De Valencia a Cuenca"
-                  />
-                  <Button onClick={() => console.log("Agregar algo")}>
-                    <Button.Icon>
-                      <PlusIcon size={20} />
-                    </Button.Icon>
-                    <Button.Text>Añadir párrafo</Button.Text>
-                  </Button>
-                  <Button onClick={() => console.log("Agregar algo")}>
-                    <Button.Icon>
-                      <PlusIcon size={20} />
-                    </Button.Icon>
-                    <Button.Text>Añadir vídeo</Button.Text>
-                  </Button>
-                </div>
-                <div></div>
-              </div>
+                section={section}
+                index={index}
+              />
+            );
+          case "freetour":
+            return (
+              <CreateFreetourSectionMolecule
+                key={section + "-" + index}
+                section={section}
+                index={index}
+              />
             );
           default:
             break;
