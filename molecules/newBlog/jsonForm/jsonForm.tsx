@@ -5,13 +5,13 @@ import EyeSlashIcon from "@/atoms/icons/eyeSlash";
 import React, { useEffect, useState } from "react";
 import CreateRouteSectionMolecule from "../createRouteSection/createRouteSection";
 import { useFinalJson } from "../../../organisms/newBlog/finalJsonProvider/finalJsonProvider";
-import CreateTravelSectionMolecule from "../createTravelSection/createTravelSection";
-import CreateFreetourSectionMolecule from "../createFreetourSection/createFreetourSection";
+import CreateSectionMolecule from "../createSection/createSection";
+import { SectionKey } from "@/utils/types";
 
 export default function JsonFormMolecule({
   sectionsInFinalJson,
 }: {
-  sectionsInFinalJson: string[];
+  sectionsInFinalJson: SectionKey[];
 }) {
   const { finalJson, setFinalJson } = useFinalJson();
   const [showJson, setShowJson] = useState<boolean>(false);
@@ -94,8 +94,12 @@ export default function JsonFormMolecule({
           <Button.Text>Copiar JSON en portapapeles</Button.Text>
         </Button>
       </div>
-      {showJson && <div>{JSON.stringify(finalJson, null, 2)}</div>}
-      {sectionsInFinalJson.map((section: string, index: number) => {
+      {showJson && (
+        <pre className="whitespace-pre-wrap text-sm font-mono p-3">
+          {JSON.stringify(finalJson, null, 2)}
+        </pre>
+      )}
+      {sectionsInFinalJson.map((section: SectionKey, index: number) => {
         switch (section) {
           case "route":
             return (
@@ -105,24 +109,14 @@ export default function JsonFormMolecule({
                 index={index}
               />
             );
-          case "travel":
-            return (
-              <CreateTravelSectionMolecule
-                key={section + "-" + index}
-                section={section}
-                index={index}
-              />
-            );
-          case "freetour":
-            return (
-              <CreateFreetourSectionMolecule
-                key={section + "-" + index}
-                section={section}
-                index={index}
-              />
-            );
           default:
-            break;
+            return (
+              <CreateSectionMolecule
+                key={section + "-" + index}
+                section={section}
+                index={index}
+              />
+            );
         }
       })}
     </section>

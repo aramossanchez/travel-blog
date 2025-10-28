@@ -16,6 +16,7 @@ export default function ParagraphContentFormMolecule({
   section,
 }: ParagraphContentFormMoleculeProps) {
   const { getRouteFieldToChange, setRouteField } = useFinalJson();
+  
   return (
     <div className="flex items-start gap-x-2">
       <Button onClick={() => console.log("Eliminar paragraph")} state="empty">
