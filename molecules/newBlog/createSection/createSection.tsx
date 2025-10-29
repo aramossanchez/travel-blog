@@ -11,6 +11,9 @@ import VideoContentFormMolecule from "../contentForms/videoContentForm";
 import CarrouselContentFormMolecule from "../contentForms/carrouselContentForm";
 import PlusIcon from "@/atoms/icons/plus";
 import { SectionKey } from "@/utils/types";
+import SubtitleContentFormMolecule from "../contentForms/subtitleContentForm";
+import LinkContentFormMolecule from "../contentForms/linkContentForm";
+import SeparatorContentFormMolecule from "../contentForms/separatorContentForm";
 
 interface CreateSectionMoleculeProps {
   section: SectionKey;
@@ -83,6 +86,30 @@ export default function CreateSectionMolecule({
                       section={section}
                     />
                   )}
+                  {content.type === "subtitle" && (
+                    <SubtitleContentFormMolecule
+                      key={`${section}-subtitle-${index}`}
+                      index={index}
+                      id={content.id as string}
+                      section={section}
+                    />
+                  )}
+                  {content.type === "link" && (
+                    <LinkContentFormMolecule
+                      key={`${section}-link-${index}`}
+                      index={index}
+                      id={content.id as string}
+                      section={section}
+                    />
+                  )}
+                  {content.type === "separator" && (
+                    <SeparatorContentFormMolecule
+                      key={`${section}-separator-${index}`}
+                      index={index}
+                      id={content.id as string}
+                      section={section}
+                    />
+                  )}
                   {content.type === "image" && (
                     <ImageContentFormMolecule
                       key={`${section}-image-${index}`}
@@ -117,6 +144,24 @@ export default function CreateSectionMolecule({
             <PlusIcon size={20} />
           </Button.Icon>
           <Button.Text>Añadir paragraph (texto de explicación)</Button.Text>
+        </Button>
+        <Button onClick={() => addRouteRepeatedSection(section, "subtitle")}>
+          <Button.Icon>
+            <PlusIcon size={20} />
+          </Button.Icon>
+          <Button.Text>Añadir subtitle (texto más grande)</Button.Text>
+        </Button>
+        <Button onClick={() => addRouteRepeatedSection(section, "link")}>
+          <Button.Icon>
+            <PlusIcon size={20} />
+          </Button.Icon>
+          <Button.Text>Añadir link (enlace a otra página)</Button.Text>
+        </Button>
+        <Button onClick={() => addRouteRepeatedSection(section, "separator")}>
+          <Button.Icon>
+            <PlusIcon size={20} />
+          </Button.Icon>
+          <Button.Text>Añadir separator (texto de explicación)</Button.Text>
         </Button>
         <Button onClick={() => addRouteRepeatedSection(section, "image")}>
           <Button.Icon>

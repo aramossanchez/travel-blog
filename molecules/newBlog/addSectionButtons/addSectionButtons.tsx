@@ -1,9 +1,10 @@
 import Button from "@/atoms/button/button";
 import PlusIcon from "@/atoms/icons/plus";
+import { SectionKey } from "@/utils/types";
 
 interface AddSectionButtonsMoleculeProps {
-  sectionsInFinalJson: string[];
-  setSectionsInFinalJson: (sections: string[]) => void;
+  sectionsInFinalJson: SectionKey[];
+  setSectionsInFinalJson: (sections: SectionKey[]) => void;
 }
 
 export default function AddSectionButtonsMolecule({
@@ -11,7 +12,8 @@ export default function AddSectionButtonsMolecule({
   setSectionsInFinalJson,
 }: AddSectionButtonsMoleculeProps) {
   return (
-    <section className="w-full h-fit py-4 px-2 rounded-md">
+    <section className="w-full h-fit space-y-4">
+      <h2 className="text-lg font-semibold">Añadir secciones a la ruta</h2>
       <div className="w-full flex flex-rows items-center justify-start gap-4 flex-wrap">
         <Button
           onClick={() =>

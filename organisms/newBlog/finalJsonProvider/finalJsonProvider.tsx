@@ -7,6 +7,7 @@ import {
   RouteDataType,
   SectionKey,
 } from "@/utils/types";
+import { url } from "inspector";
 import { createContext, useContext, useState } from "react";
 
 type FinalJson = RouteDataType;
@@ -72,6 +73,23 @@ export function FinalJsonProvider({ children }: { children: React.ReactNode }) {
                       type: content,
                       text: "",
                       id: `${content}-${Date.now()}`,
+                    }
+                  : content === "subtitle"
+                  ? {
+                      type: content,
+                      text: "",
+                      id: `${content}-${Date.now()}`,
+                    }
+                  : content === "link"
+                  ? {
+                      type: content,
+                      text: "",
+                      src: "",
+                      id: `${content}-${Date.now()}`,
+                    }
+                  : content === "separator"
+                  ? {
+                      type: content,
                     }
                   : content === "video"
                   ? {
@@ -194,6 +212,15 @@ export function FinalJsonProvider({ children }: { children: React.ReactNode }) {
       return contentSelected[fieldKeyToChange];
     }
     if (contentSelected.type === "paragraph" && fieldKeyToChange === "text") {
+      return contentSelected[fieldKeyToChange];
+    }
+    if (contentSelected.type === "subtitle" && fieldKeyToChange === "text") {
+      return contentSelected[fieldKeyToChange];
+    }
+    if (
+      contentSelected.type === "link" &&
+      (fieldKeyToChange === "text" || fieldKeyToChange === "src")
+    ) {
       return contentSelected[fieldKeyToChange];
     }
     if (

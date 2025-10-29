@@ -19,12 +19,15 @@ export default function VideoContentFormMolecule({
 
   return (
     <div className="flex flex-col gap-y-4">
-      <div className="flex items-start gap-x-2">
+      <div className="flex items-center gap-x-2">
         <Button onClick={() => console.log("Eliminar video")} state="empty">
           <Button.Icon>
             <TrashIcon size={16} />
           </Button.Icon>
         </Button>
+        <p>Vídeo</p>
+      </div>
+      <div className="flex flex-col gap-y-4 pl-6">
         <InputAtom
           id={`${section}-video-src-${id}-${index}`}
           label={`Url EMBED del vídeo de Youtube`}
@@ -32,13 +35,6 @@ export default function VideoContentFormMolecule({
           value={getRouteFieldToChange(section, "video", "src", id)}
           onChange={(e) => setRouteField(section, "video", "src", e, false, id)}
         />
-      </div>
-      <div className="flex items-start gap-x-2">
-        <Button onClick={() => console.log("Eliminar video")} state="empty">
-          <Button.Icon>
-            <TrashIcon size={16} />
-          </Button.Icon>
-        </Button>
         <InputAtom
           id={`${section}-video-alt-${id}-${index}`}
           label={`Texto alternativo del vídeo`}
@@ -46,13 +42,6 @@ export default function VideoContentFormMolecule({
           value={getRouteFieldToChange(section, "video", "alt", id)}
           onChange={(e) => setRouteField(section, "video", "alt", e, false, id)}
         />
-      </div>
-      <div className="flex items-start gap-x-2">
-        <Button onClick={() => console.log("Eliminar video")} state="empty">
-          <Button.Icon>
-            <TrashIcon size={16} />
-          </Button.Icon>
-        </Button>
         <InputAtom
           id={`${section}-video-label-${id}-${index}`}
           label={`Label del vídeo`}

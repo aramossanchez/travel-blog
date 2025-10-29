@@ -50,79 +50,93 @@ export default function CarrouselContentFormMolecule({
           selectedCarrousel?.carrousel.length > 0 &&
           selectedCarrousel.carrousel.map((image, index_carrousel) => {
             return (
-              <Fragment
+              <div
                 key={`${index}-${id}-carrousel-image-${index_carrousel}`}
+                className="flex flex-col gap-y-4 pl-6"
               >
-                <InputAtom
-                  id={`${section}-carrousel-${image.id}-${index_carrousel}`}
-                  label={`Url de la imagen`}
-                  placeholder="/cuenca.png"
-                  value={getRouteFieldToChange(
-                    section,
-                    "carrousel",
-                    "src",
-                    id,
-                    image.id
-                  )}
-                  onChange={(e) =>
-                    setRouteField(
+                <div className="flex items-center gap-x-2">
+                  <Button
+                    onClick={() => console.log("Eliminar video")}
+                    state="empty"
+                  >
+                    <Button.Icon>
+                      <TrashIcon size={16} />
+                    </Button.Icon>
+                  </Button>
+                  <p>Imagen del carrusel # {index_carrousel + 1}</p>
+                </div>
+                <div className="flex flex-col gap-y-4 pl-6">
+                  <InputAtom
+                    id={`${section}-carrousel-${image.id}-${index_carrousel}`}
+                    label={`Url de la imagen`}
+                    placeholder="/cuenca.png"
+                    value={getRouteFieldToChange(
                       section,
                       "carrousel",
                       "src",
-                      e,
-                      false,
                       id,
                       image.id
-                    )
-                  }
-                />
-                <InputAtom
-                  id={`${section}-carrousel-${image.id}-${index_carrousel}`}
-                  label={`Alt de la imagen`}
-                  placeholder="plato-1-cuenca"
-                  value={getRouteFieldToChange(
-                    section,
-                    "carrousel",
-                    "alt",
-                    id,
-                    image.id
-                  )}
-                  onChange={(e) =>
-                    setRouteField(
+                    )}
+                    onChange={(e) =>
+                      setRouteField(
+                        section,
+                        "carrousel",
+                        "src",
+                        e,
+                        false,
+                        id,
+                        image.id
+                      )
+                    }
+                  />
+                  <InputAtom
+                    id={`${section}-carrousel-${image.id}-${index_carrousel}`}
+                    label={`Alt de la imagen`}
+                    placeholder="plato-1-cuenca"
+                    value={getRouteFieldToChange(
                       section,
                       "carrousel",
                       "alt",
-                      e,
-                      false,
                       id,
                       image.id
-                    )
-                  }
-                />
-                <InputAtom
-                  id={`${section}-carrousel-${image.id}-${index_carrousel}`}
-                  label={`Label de la imagen`}
-                  placeholder="1º plato del menú del 1º día en Cuenca"
-                  value={getRouteFieldToChange(
-                    section,
-                    "carrousel",
-                    "label",
-                    id,
-                    image.id
-                  )}
-                  onChange={(e) =>
-                    setRouteField(
+                    )}
+                    onChange={(e) =>
+                      setRouteField(
+                        section,
+                        "carrousel",
+                        "alt",
+                        e,
+                        false,
+                        id,
+                        image.id
+                      )
+                    }
+                  />
+                  <InputAtom
+                    id={`${section}-carrousel-${image.id}-${index_carrousel}`}
+                    label={`Label de la imagen`}
+                    placeholder="1º plato del menú del 1º día en Cuenca"
+                    value={getRouteFieldToChange(
                       section,
                       "carrousel",
                       "label",
-                      e,
-                      false,
                       id,
                       image.id
-                    )
-                  }
-                />
-              </Fragment>
+                    )}
+                    onChange={(e) =>
+                      setRouteField(
+                        section,
+                        "carrousel",
+                        "label",
+                        e,
+                        false,
+                        id,
+                        image.id
+                      )
+                    }
+                  />
+                </div>
+              </div>
             );
           })}
       </div>

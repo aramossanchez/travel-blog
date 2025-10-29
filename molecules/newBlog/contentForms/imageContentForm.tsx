@@ -19,12 +19,15 @@ export default function ImageContentFormMolecule({
 
   return (
     <div className="flex flex-col gap-y-4">
-      <div className="flex items-start gap-x-2">
+      <div className="flex items-center gap-x-2">
         <Button onClick={() => console.log("Eliminar imagen")} state="empty">
           <Button.Icon>
             <TrashIcon size={16} />
           </Button.Icon>
         </Button>
+        <p>Imagen</p>
+      </div>
+      <div className="flex flex-col gap-y-4 pl-6">
         <InputAtom
           id={`${section}-image-src-${id}-${index}`}
           label={`Url de la imagen`}
@@ -32,13 +35,6 @@ export default function ImageContentFormMolecule({
           value={getRouteFieldToChange(section, "image", "src", id)}
           onChange={(e) => setRouteField(section, "image", "src", e, false, id)}
         />
-      </div>
-      <div className="flex items-start gap-x-2">
-        <Button onClick={() => console.log("Eliminar video")} state="empty">
-          <Button.Icon>
-            <TrashIcon size={16} />
-          </Button.Icon>
-        </Button>
         <InputAtom
           id={`${section}-image-alt-${id}-${index}`}
           label={`Texto alternativo de la imagen`}
@@ -46,13 +42,6 @@ export default function ImageContentFormMolecule({
           value={getRouteFieldToChange(section, "image", "alt", id)}
           onChange={(e) => setRouteField(section, "image", "alt", e, false, id)}
         />
-      </div>
-      <div className="flex items-start gap-x-2">
-        <Button onClick={() => console.log("Eliminar video")} state="empty">
-          <Button.Icon>
-            <TrashIcon size={16} />
-          </Button.Icon>
-        </Button>
         <InputAtom
           id={`${section}-image-label-${id}-${index}`}
           label={`Label de la imagen`}
