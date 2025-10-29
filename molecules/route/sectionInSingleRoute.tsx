@@ -12,8 +12,8 @@ export default function SectionInSingleRouteMolecule({
 }: SectionInSingleRouteMoleculeProps) {
   return (
     <section id={sectionType} className="w-full space-y-4">
-      {content.map((data) => {
-        return routeJsonToHtml({ data, sectionType });
+      {content.map((data, index: number) => {
+        return routeJsonToHtml({ data, sectionType, index });
       })}
     </section>
   );

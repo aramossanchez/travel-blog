@@ -11,18 +11,23 @@ import { Fragment } from "react";
 interface RouteJsonToHtmlProps {
   data: ContentBlock;
   sectionType: SectionKey;
+  index?: number;
 }
 
 export default function routeJsonToHtml({
   data,
   sectionType,
+  index,
 }: RouteJsonToHtmlProps) {
   switch (data.type) {
     case "primaryTitle":
-      return <h1>{data.text}</h1>;
+      return <h1 key={data.type}>{data.text}</h1>;
     case "published":
       return (
-        <div className="flex flex-col italic text-foregroundSecondary">
+        <div
+          key={data.type}
+          className="flex flex-col italic text-foregroundSecondary"
+        >
           <span>Publicado el {data.date}.</span>
           <div>
             <span>Creado por </span>
@@ -46,10 +51,15 @@ export default function routeJsonToHtml({
         </div>
       );
     case "introduction":
-      return <p className="text-lg">{data.text}</p>;
+      return (
+        <p key={data.type + "-" + data.text} className="text-lg">
+          {data.text}
+        </p>
+      );
     case "image-presentation":
       return (
         <Image
+          key={data.type}
           id={data.src}
           src={data.src}
           alt={data.alt}
@@ -60,7 +70,7 @@ export default function routeJsonToHtml({
       );
     case "title":
       return (
-        <header className="space-y-2">
+        <header key={data.type + "-" + data.text} className="space-y-2">
           <div className="flex flex-row items-center gap-x-4">
             {iconSelector({ section: sectionType })}
             <h2>{data.text}</h2>
@@ -69,12 +79,15 @@ export default function routeJsonToHtml({
         </header>
       );
     case "subtitle":
-      return <h3>{data.text}</h3>;
+      return <h3 key={data.type + "-" + data.text}>{data.text}</h3>;
     case "paragraph":
-      return <p>{data.text}</p>;
+      return <p key={data.type + "-" + data.text}>{data.text}</p>;
     case "link":
       return (
-        <p className="group flex flex-row items-center gap-x-1 w-fit">
+        <div
+          key={data.type + "-" + data.src}
+          className="group flex flex-row items-center gap-x-1 w-fit"
+        >
           <p className="group-hover:text-primaryColor duration-200 group-hover:pr-3">
             <ArrowRightIcon size={20} />
           </p>
@@ -85,14 +98,20 @@ export default function routeJsonToHtml({
           >
             {data.text}
           </Link>
-        </p>
+        </div>
       );
     case "image":
-      return <ImageModal data={data} maxSize="max-w-[500px] max-h-[300px]" />;
+      return (
+        <ImageModal
+          key={data.type + "-" + data.alt}
+          data={data}
+          maxSize="max-w-[500px] max-h-[300px]"
+        />
+      );
     case "carrousel":
       return (
-        <>
-          <div className="grid grid-cols-4 gap-4">
+        <Fragment key={data.type + "-" + index}>
+          <div className="grid-cols-4 gap-4 hidden lg:grid">
             {data.carrousel.map((image) => {
               return (
                 <ImageModal
@@ -104,11 +123,11 @@ export default function routeJsonToHtml({
             })}
           </div>
           <SliderImages images={data.carrousel} />
-        </>
+        </Fragment>
       );
     case "video":
       return (
-        <div className="space-y-1">
+        <div key={data.type + "-" + data.src} className="space-y-1">
           <iframe
             className="border-2 border-primaryColor rounded-lg overflow-hidden"
             id={data.src}
@@ -125,9 +144,8 @@ export default function routeJsonToHtml({
         </div>
       );
     case "separator":
-      return <div className="py-2"></div>;
+      return <div key={data.type + "-" + index} className="py-2"></div>;
     default:
-      break;
+      return <div key="no-data-type"></div>;
   }
-  return <div></div>;
 }

@@ -1,25 +1,25 @@
 [
   {
-    "id": "1234",
+    "id": "20250930-cuenca-en",
     "route": {
       "content": [
         {
           "type": "primaryTitle",
-          "text": "Traducir al valenciano"
+          "text": "Cuenca"
         },
         {
           "type": "published",
-          "date": "30 de Septiembre de 2025",
+          "date": "September 30, 2025",
           "authors": ["Armando"]
         },
         {
           "type": "image-presentation",
           "src": "/cuenca.avif",
-          "alt": "Foto de Cuenca"
+          "alt": "Photo of Cuenca"
         },
         {
           "type": "introduction",
-          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. Destaca su catedral de estilo gótico, uno de los primeros templos de este estilo en España. La ciudad combina tradición y modernidad con museos como el de Arte Abstracto Español. Rodeada de naturaleza, es también punto de partida para rutas por la Serranía de Cuenca. Un destino que mezcla historia, cultura y paisajes únicos."
+          "text": "Cuenca, located in Castilla-La Mancha, is a city declared a UNESCO World Heritage Site. Its historic center rises between the gorges of the Júcar and Huécar rivers, offering a spectacular landscape of hanging houses and cobbled streets. Its Gothic-style cathedral stands out as one of the first temples of this style in Spain. The city combines tradition and modernity with museums such as the Spanish Abstract Art Museum. Surrounded by nature, it is also a starting point for routes through the Serranía de Cuenca. A destination that blends history, culture, and unique landscapes."
         }
       ]
     },

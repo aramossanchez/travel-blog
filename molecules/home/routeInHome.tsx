@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface RouteInHomeMoleculeProps {
+  id?: string;
   image?: string;
   title?: string;
   text?: string;
@@ -11,10 +12,11 @@ interface RouteInHomeMoleculeProps {
 }
 
 export default function RouteInHomeMolecule({
+  id = "",
   image = "",
   title = "",
   text = "",
-  href = "/route/1234",
+  href = `/route/${id}`,
   date = "",
 }: RouteInHomeMoleculeProps) {
   return (

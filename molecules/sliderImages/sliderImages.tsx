@@ -48,7 +48,7 @@ export default function SliderImages({ images }: SliderImagesProps) {
   };
 
   return (
-    <div className="w-full h-[60dvw] max-w-full max-h-[60dvw] relative">
+    <div className="w-full h-[60dvw] max-w-full max-h-[60dvw] relative block lg:hidden border-2 border-primaryColor rounded-lg overflow-hidden">
       <button
         className="absolute left-1 top-1/2 z-20 cursor-pointer rotate-180 -translate-y-1/2 bg-foreground rounded-full p-2"
         onClick={() => goPrevImage()}

@@ -1,11 +1,11 @@
 [
   {
-    "id": "1234",
+    "id": "20250930-cuenca-es",
     "route": {
       "content": [
         {
           "type": "primaryTitle",
-          "text": "Traducir al inglés"
+          "text": "Cuenca"
         },
         {
           "type": "published",
@@ -19,7 +19,11 @@
         },
         {
           "type": "introduction",
-          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. Destaca su catedral de estilo gótico, uno de los primeros templos de este estilo en España. La ciudad combina tradición y modernidad con museos como el de Arte Abstracto Español. Rodeada de naturaleza, es también punto de partida para rutas por la Serranía de Cuenca. Un destino que mezcla historia, cultura y paisajes únicos."
+          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. "
+        },
+        {
+          "type": "introduction",
+          "text": "Destaca su catedral de estilo gótico, uno de los primeros templos de este estilo en España. La ciudad combina tradición y modernidad con museos como el de Arte Abstracto Español. Rodeada de naturaleza, es también punto de partida para rutas por la Serranía de Cuenca. Un destino que mezcla historia, cultura y paisajes únicos."
         }
       ]
     },
