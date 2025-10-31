@@ -1,4 +1,3 @@
-import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import CardIconTitleImageDateTextMolecule from "@/molecules/cards/cardIconTitleImageDateText";
 import iconSelector from "@/services/iconSelector";
 import { RouteByGetSectionType, SectionKey } from "@/utils/types";

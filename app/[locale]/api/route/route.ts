@@ -10,6 +10,7 @@ export async function GET(
   const { locale } = await params;
   const dirPath = path.join(process.cwd(), "data", locale);
   try {
+    // ESTA FUNCIÓN HAY QUE COMPONETIZARLA, SE USA EN VARIOS SITIOS. VA A PODER RECIBIR EL PARÁMETRO POR EL QUE ORDENAR EL LISTADO
     const files = await readdir(dirPath);
     const jsonFiles = files.filter((file) => file.endsWith(".json"));
 
