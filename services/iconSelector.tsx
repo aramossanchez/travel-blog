@@ -7,17 +7,19 @@ import LocationIcon from "@/atoms/icons/location";
 import LookForCityIcon from "@/atoms/icons/lookForCity";
 import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import RollerIcon from "@/atoms/icons/roller";
+import { SectionKey } from "@/utils/types";
 
 interface IconSelectorProps {
-  section: string;
+  section: SectionKey;
   size?: number;
+  color?: string;
 }
 
 export default function iconSelector({
   section,
   size = 30,
+  color = "var(--primaryColor)",
 }: IconSelectorProps) {
-  const color = "var(--primaryColor)";
   switch (section) {
     case "route":
       return <LocationIcon size={size} color={color} />;

@@ -1,11 +1,11 @@
 [
   {
-    "id": "20250930-cuenca-es",
+    "id": "20251030-castellon-es",
     "route": {
       "content": [
         {
           "type": "primaryTitle",
-          "text": "Cuenca"
+          "text": "Castellón"
         },
         {
           "type": "published",
@@ -14,12 +14,12 @@
         },
         {
           "type": "image-presentation",
-          "src": "/cuenca.avif",
-          "alt": "Foto de Cuenca"
+          "src": "/villarreal.jpg",
+          "alt": "Foto de Castellón"
         },
         {
           "type": "introduction",
-          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. "
+          "text": "Castellón, situada en la Comunidad Valenciana, es una ciudad que combina historia, cultura y naturaleza. Su casco antiguo, con calles empedradas y edificios históricos, invita a ser explorado."
         },
         {
           "type": "introduction",
@@ -50,12 +50,6 @@
           "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
           "alt": "video-return",
           "label": "Video completo de la ida a Cuenca en moto."
-        },
-        {
-          "src": "/moto.png",
-          "type": "image",
-          "alt": "Mapa de la ruta en moto de Valencia a Cuenca",
-          "label": "Foto de mi Voge 625 al llegar a las afueras de Cuenca."
         }
       ]
     },
@@ -72,21 +66,6 @@
         {
           "type": "paragraph",
           "text": "El recorrido continúa hacia las famosas Casas Colgadas, emblema de Cuenca, suspendidas sobre el abismo y hoy sede del Museo de Arte Abstracto Español. A lo largo del camino se descubren miradores espectaculares, historias de caballeros medievales y anécdotas locales. El tour suele finalizar en el Puente de San Pablo, desde donde se obtiene una de las vistas más icónicas de la ciudad, uniendo patrimonio, cultura y paisaje en un paseo inolvidable."
-        },
-        {
-          "type": "carrousel",
-          "carrousel": [
-            {
-              "src": "/freetour1.png",
-              "alt": "free-tour-1",
-              "label": "Foto del free tour en la Plaza Mayor."
-            },
-            {
-              "src": "/freetour2.png",
-              "alt": "free-tour-2",
-              "label": "Foto del free tour en las Casas Colgadas."
-            }
-          ]
         }
       ]
     },

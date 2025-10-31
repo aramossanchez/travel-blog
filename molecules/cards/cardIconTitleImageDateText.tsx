@@ -2,27 +2,29 @@ import LocationIcon from "@/atoms/icons/location";
 import Image from "next/image";
 import Link from "next/link";
 
-interface RouteInHomeMoleculeProps {
+interface CardIconTitleImageDateTextMoleculeProps {
   id?: string;
-  image?: string;
-  title?: string;
-  text?: string;
   href?: string;
+  icon?: React.ReactNode;
+  title?: string;
+  image?: string;
   date?: string;
+  text?: string;
 }
 
-export default function RouteInHomeMolecule({
+export default function CardIconTitleImageDateTextMolecule({
   id = "",
-  image = "",
-  title = "",
-  text = "",
   href = `/route/${id}`,
+  icon = <LocationIcon color="var(--primaryColor)" />,
+  title = "",
+  image = "",
   date = "",
-}: RouteInHomeMoleculeProps) {
+  text = "",
+}: CardIconTitleImageDateTextMoleculeProps) {
   return (
     <div className="h-fit flex flex-col gap-y-4">
       <Link href={href} className="flex items-center gap-x-4">
-        <LocationIcon color="var(--primaryColor)" />
+        {icon}
         <h2>{title}</h2>
       </Link>
       <Link href={href}>

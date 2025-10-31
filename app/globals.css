@@ -66,6 +66,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   row-gap: 80px;
+  min-height: 100dvh;
 }
 
 .organism {

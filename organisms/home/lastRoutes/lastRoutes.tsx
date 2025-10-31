@@ -1,5 +1,5 @@
 import HrAtom from "@/atoms/hr";
-import RouteInHomeMolecule from "@/molecules/home/routeInHome";
+import CardIconTitleImageDateTextMolecule from "@/molecules/cards/cardIconTitleImageDateText";
 import { getLastRoutes } from "@/services/getLastRoutes";
 import { Locale, RouteDataType } from "@/utils/types";
 
@@ -20,6 +20,7 @@ export default async function LastRoutesOrganism({
             // DATOS PARA MOSTRAR RESUMEN DE CADA RUTA
             const routeInfo = route.content[0].route?.content || [];
             const id = route.content[0].id;
+            console.log(id);
             const title = routeInfo.find(
               (item) => item.type === "primaryTitle"
             )?.text;
@@ -33,7 +34,7 @@ export default async function LastRoutesOrganism({
               (item) => item.type === "published"
             )?.date;
             return (
-              <RouteInHomeMolecule
+              <CardIconTitleImageDateTextMolecule
                 key={id}
                 id={id}
                 title={title}

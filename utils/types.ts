@@ -59,3 +59,10 @@ export type SectionKey =
 export type RouteDataType = { id: string } & {
   [K in SectionKey]?: Section;
 };
+
+export type RouteByGetSectionType = {
+  id: string;
+  route: Section;
+} & {
+  [K in SectionKey]?: Section;
+};

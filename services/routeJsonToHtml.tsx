@@ -3,10 +3,10 @@ import { ContentBlock, SectionKey } from "@/utils/types";
 import Image from "next/image";
 import iconSelector from "./iconSelector";
 import Link from "next/link";
-import ArrowRightIcon from "@/atoms/icons/arrowRight";
 import ImageModal from "@/molecules/imageModal";
 import SliderImages from "@/molecules/sliderImages/sliderImages";
 import { Fragment } from "react";
+import LinkAtom from "@/atoms/link/link";
 
 interface RouteJsonToHtmlProps {
   data: ContentBlock;
@@ -84,21 +84,11 @@ export default function routeJsonToHtml({
       return <p key={data.type + "-" + data.text}>{data.text}</p>;
     case "link":
       return (
-        <div
+        <LinkAtom
           key={data.type + "-" + data.src}
-          className="group flex flex-row items-center gap-x-1 w-fit"
-        >
-          <p className="group-hover:text-primaryColor duration-200 group-hover:pr-3">
-            <ArrowRightIcon size={20} />
-          </p>
-          <Link
-            href={data.src}
-            target="_blank"
-            className="underline hover:text-primaryColor duration-200"
-          >
-            {data.text}
-          </Link>
-        </div>
+          href={data.src}
+          text={data.text}
+        />
       );
     case "image":
       return (
