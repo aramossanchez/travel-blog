@@ -16,7 +16,6 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
   const sectionKeys: SectionKey[] = Object.keys(data).filter(
     (key) => key !== "id"
   ) as SectionKey[];
-
   return (
     <article className="organism space-y-16 relative">
       <DropdownMolecule

@@ -72,7 +72,7 @@ export default function routeJsonToHtml({
       return (
         <header key={data.type + "-" + data.text} className="space-y-2">
           <div className="flex flex-row items-center gap-x-4">
-            {iconSelector({ section: sectionType })}
+            {iconSelector({ string: sectionType })}
             <h2>{data.text}</h2>
           </div>
           <HrAtom />
@@ -95,7 +95,7 @@ export default function routeJsonToHtml({
         <ImageModal
           key={data.type + "-" + data.alt}
           data={data}
-          maxSize="max-w-[500px] max-h-[300px]"
+          maxSize="lg:max-w-[500px] lg:max-h-[300px]"
         />
       );
     case "carrousel":
@@ -119,10 +119,10 @@ export default function routeJsonToHtml({
       return (
         <div key={data.type + "-" + data.src} className="space-y-1">
           <iframe
-            className="border-2 border-primaryColor rounded-lg overflow-hidden"
+            className="border-2 border-primaryColor rounded-lg overflow-hidden lg:min-w-[500px] lg:min-h-[300px] sm:min-h-[400px] min-h-[250px] min-w-full"
             id={data.src}
-            width="500"
-            height="300"
+            width="200"
+            height="300%"
             src={data.src}
             title={data.alt}
             referrerPolicy="strict-origin-when-cross-origin"

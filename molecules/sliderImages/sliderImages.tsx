@@ -49,17 +49,20 @@ export default function SliderImages({ images }: SliderImagesProps) {
 
   return (
     <div className="w-full h-[60dvw] max-w-full max-h-[60dvw] relative block lg:hidden border-2 border-primaryColor rounded-lg overflow-hidden">
+      <p className="absolute top-0 left-0 z-20 px-2 py-1 rounded-br-xl bg-foreground text-primaryColor">
+        {images[imageActive].label}
+      </p>
       <button
-        className="absolute left-1 top-1/2 z-20 cursor-pointer rotate-180 -translate-y-1/2 bg-foreground rounded-full p-2"
+        className="absolute left-1 top-1/2 z-20 cursor-pointer rotate-180 -translate-y-1/2 bg-foreground rounded-full p-2 outline-2 outline-primaryColor"
         onClick={() => goPrevImage()}
       >
-        <FilledArrowIcon size={40} color="var(--primaryColor)" />
+        <FilledArrowIcon size={20} color="var(--primaryColor)" />
       </button>
       <button
-        className="absolute right-1 top-1/2 z-20 cursor-pointer -translate-y-1/2 bg-foreground rounded-full p-2"
+        className="absolute right-1 top-1/2 z-20 cursor-pointer -translate-y-1/2 bg-foreground rounded-full p-2 outline-2 outline-primaryColor"
         onClick={() => goNextImage()}
       >
-        <FilledArrowIcon size={40} color="var(--primaryColor)" />
+        <FilledArrowIcon size={20} color="var(--primaryColor)" />
       </button>
       <div className="w-full h-[60dvw] max-w-full max-h-[60dvw] flex items-center overflow-hidden">
         <div className="flex flex-row items-center gap-x-8 w-full relative">
@@ -87,7 +90,7 @@ export default function SliderImages({ images }: SliderImagesProps) {
             <button
               className={`${styleSelectorImage(
                 index
-              )} h-3 w-3 bg-primaryColor rounded-full hover:scale-150 transition-transform duration-200 cursor-pointer `}
+              )} h-2 w-2 bg-primaryColor rounded-full hover:scale-150 transition-transform duration-200 cursor-pointer `}
               key={index}
               onClick={() => {
                 setImageActive(index);

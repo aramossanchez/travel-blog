@@ -87,6 +87,7 @@ export default function DropdownMolecule({
                   <Link
                     href={`#${key}`}
                     className="bg-foreground text-background hover:bg-foregroundSecondary px-4 flex items-center gap-x-4 py-2"
+                    onClick={() => setIsOpen(false)}
                   >
                     {icons && iconSelector({ string: key, size: 20 })}
                     <p className="whitespace-nowrap">{t(key)}</p>
