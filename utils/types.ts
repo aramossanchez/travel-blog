@@ -66,3 +66,5 @@ export type RouteByGetSectionType = {
 } & {
   [K in SectionKey]?: Section;
 };
+
+export type SortedCriteriaType = "dateAsc" | "dateDesc";

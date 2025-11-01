@@ -1,3 +1,4 @@
+import ArrowSortUpIcon from "@/atoms/icons/arrowNumbersUp";
 import BedIcon from "@/atoms/icons/bed";
 import ClimberIcon from "@/atoms/icons/climber";
 import FoodIcon from "@/atoms/icons/food";
@@ -7,20 +8,20 @@ import LocationIcon from "@/atoms/icons/location";
 import LookForCityIcon from "@/atoms/icons/lookForCity";
 import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import RollerIcon from "@/atoms/icons/roller";
-import { SectionKey } from "@/utils/types";
+import ArrowSortDownIcon from "@/atoms/icons/arrowSortDown";
 
 interface IconSelectorProps {
-  section: SectionKey;
+  string: string;
   size?: number;
   color?: string;
 }
 
 export default function iconSelector({
-  section,
+  string,
   size = 30,
   color = "var(--primaryColor)",
 }: IconSelectorProps) {
-  switch (section) {
+  switch (string) {
     case "route":
       return <LocationIcon size={size} color={color} />;
     case "travel":
@@ -39,6 +40,10 @@ export default function iconSelector({
       return <FoodIcon size={size} color={color} />;
     case "return":
       return <HomeIcon size={size} color={color} />;
+    case "dateDesc":
+      return <ArrowSortDownIcon size={size} color={color} />;
+    case "dateAsc":
+      return <ArrowSortUpIcon size={size} color={color} />;
     default:
       return null;
   }

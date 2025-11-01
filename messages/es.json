@@ -15,8 +15,24 @@
     "eat": "Comida",
     "return": "Viaje de vuelta"
   },
+  "Explanation": {
+    "Sections": "Secciones",
+    "route": "Ruta",
+    "travel": " dejo constancia del trayecto hacia el destino principal de la ruta. Normalmente incluyo detalles sobre las paradas realizadas y cualquier experiencia interesante durante el trayecto (restaurantes donde comer o desayunar, gasolinera donde repostar, anécdotas, etc). Suele incluir fotos y vídeos.",
+    "freetour": " explico por encima una visita guiada por el lugar de destino, generalmente a pie. Incluyo detalles sobre los puntos de interés visitados, la historia y cultura local, así como mis impresiones personales. Suele ir acompañado de fotos y vídeos de la experiencia.",
+    "hiking": "Senderismo",
+    "climb": "Escalada",
+    "roller": "Ruta en patines",
+    "sleep": "Alojamiento",
+    "eat": "Comida",
+    "return": "Viaje de vuelta"
+  },
   "NewBlog": {
     "title": "Crear una nueva entrada de blog",
     "description": "Utiliza este formulario para crear una nueva entrada de blog sobre tus aventuras de viaje."
+  },
+  "Section": {
+    "dateAsc": "Fecha (ascendente)",
+    "dateDesc": "Fecha (descendente)"
   }
 }

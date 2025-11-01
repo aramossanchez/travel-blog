@@ -1,24 +1,25 @@
+"use client";
+
 import CardIconTitleImageDateTextMolecule from "@/molecules/cards/cardIconTitleImageDateText";
 import iconSelector from "@/services/iconSelector";
+import { useSectionData } from "@/templates/section/sectionProvider";
 import { RouteByGetSectionType, SectionKey } from "@/utils/types";
 
 interface SectionsLayoutOrganismProps {
   section: SectionKey;
-  routesData?: RouteByGetSectionType[];
 }
 
 export default function SectionsLayoutOrganism({
   section,
-  routesData,
 }: SectionsLayoutOrganismProps) {
-  console.log(routesData);
+  const { sortedRouteData } = useSectionData();
   return (
     <article className="organism space-y-4">
-      <div className="grid grid-cols-3 gap-6">
-        {routesData?.map((route: RouteByGetSectionType) => {
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+        {sortedRouteData?.map((route: RouteByGetSectionType) => {
+          // OBTENER TODOS LOS DATOS NECESARIOS DE LA RUTA PARA RENDERIZAR CORRECTAMENTE LA CARD
           const id = route.id;
           const routeInfo = route.route.content;
-          console.log(routeInfo);
           const title = routeInfo.find(
             (block) => block.type === "primaryTitle"
           )?.text;
@@ -40,10 +41,12 @@ export default function SectionsLayoutOrganism({
           const text = sectionSelected.find(
             (block) => block.type === "paragraph"
           )?.text;
+
           return (
             <CardIconTitleImageDateTextMolecule
               key={id}
-              icon={iconSelector({ section: section })}
+              href={`/route/${id}#${section}`}
+              icon={iconSelector({ string: section })}
               title={title}
               image={image}
               text={text}

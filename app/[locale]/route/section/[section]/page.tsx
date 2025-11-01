@@ -1,4 +1,4 @@
-import SectionTemplate from "@/templates/section";
+import SectionTemplate from "@/templates/section/section";
 import { Locale, SectionKey } from "@/utils/types";
 
 export default async function Route({

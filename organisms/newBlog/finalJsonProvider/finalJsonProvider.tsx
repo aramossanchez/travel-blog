@@ -7,7 +7,6 @@ import {
   RouteDataType,
   SectionKey,
 } from "@/utils/types";
-import { url } from "inspector";
 import { createContext, useContext, useState } from "react";
 
 type FinalJson = RouteDataType;
