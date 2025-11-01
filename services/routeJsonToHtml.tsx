@@ -79,7 +79,12 @@ export default function routeJsonToHtml({
         </header>
       );
     case "subtitle":
-      return <h3 key={data.type + "-" + data.text}>{data.text}</h3>;
+      return (
+        <div className="pl-1 flex flex-col items-start w-fit pt-2">
+          <h3 key={data.type + "-" + data.text}>{data.text}</h3>
+          <span className="w-[90%] h-1 bg-primaryColor rounded-xl"></span>
+        </div>
+      );
     case "paragraph":
       return <p key={data.type + "-" + data.text}>{data.text}</p>;
     case "link":

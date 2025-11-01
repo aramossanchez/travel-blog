@@ -243,9 +243,6 @@
           ]
         },
         {
-          "type": "separator"
-        },
-        {
           "type": "subtitle",
           "text": "Asador Manuel"
         },
@@ -297,9 +294,6 @@
               "label": "Plato 3 impresionante"
             }
           ]
-        },
-        {
-          "type": "separator"
         },
         {
           "type": "subtitle",
