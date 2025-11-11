@@ -124,10 +124,10 @@ export default function routeJsonToHtml({
       return (
         <div key={data.type + "-" + data.src} className="space-y-1">
           <iframe
-            className="border-2 border-primaryColor rounded-lg overflow-hidden lg:min-w-[500px] lg:min-h-[300px] sm:min-h-[400px] min-h-[250px] min-w-full"
+            className="aspect-[16/9] border-2 border-primaryColor rounded-lg overflow-hidden lg:max-w-[500px]"
             id={data.src}
-            width="200"
-            height="300%"
+            width="auto"
+            height="auto"
             src={data.src}
             title={data.alt}
             referrerPolicy="strict-origin-when-cross-origin"

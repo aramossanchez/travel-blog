@@ -38,6 +38,8 @@ export default function CreateSectionMolecule({
   const styleBlockRouteSection = showContent ? "max-h-fit" : "max-h-0";
   const styleButtonShowRouteSection = showContent ? "rotate-270" : "rotate-90";
 
+  console.log(finalJson[section].content);
+
   return (
     <div className="flex flex-col gap-y-4">
       <HrAtom />
@@ -79,20 +81,24 @@ export default function CreateSectionMolecule({
               return (
                 <>
                   {content.type === "paragraph" && (
-                    <ParagraphContentFormMolecule
-                      key={`${section}-paragraph-${index}`}
-                      index={index}
-                      id={content.id as string}
-                      section={section}
-                    />
+                    <div draggable>
+                      <ParagraphContentFormMolecule
+                        key={`${section}-paragraph-${index}`}
+                        index={index}
+                        id={content.id as string}
+                        section={section}
+                      />
+                    </div>
                   )}
                   {content.type === "subtitle" && (
-                    <SubtitleContentFormMolecule
-                      key={`${section}-subtitle-${index}`}
-                      index={index}
-                      id={content.id as string}
-                      section={section}
-                    />
+                    <div draggable>
+                      <SubtitleContentFormMolecule
+                        key={`${section}-subtitle-${index}`}
+                        index={index}
+                        id={content.id as string}
+                        section={section}
+                      />
+                    </div>
                   )}
                   {content.type === "link" && (
                     <LinkContentFormMolecule
@@ -138,7 +144,6 @@ export default function CreateSectionMolecule({
               );
             }
           )}
-        {/* FALTAN LINK, SUBTITLE Y SEPARATOR */}
         <Button onClick={() => addRouteRepeatedSection(section, "paragraph")}>
           <Button.Icon>
             <PlusIcon size={20} />
