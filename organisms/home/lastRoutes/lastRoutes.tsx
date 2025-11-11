@@ -20,7 +20,6 @@ export default async function LastRoutesOrganism({
             // DATOS PARA MOSTRAR RESUMEN DE CADA RUTA
             const routeInfo = route.content[0].route?.content || [];
             const id = route.content[0].id;
-            console.log(id);
             const title = routeInfo.find(
               (item) => item.type === "primaryTitle"
             )?.text;
