@@ -33,3 +33,12 @@
 /services -> se guardan funciones usadas en varias partes de la app
 /templates -> se guardan los main containers de cada vista
 /utils -> se guardan constantes y tipos usados en toda la app
+
+## Nomenclatura de las rutas
+
+- El nombre del archivo json que contiene la data de la ruta tendrá la siguiente estructura:
+- Fecha: con formato año, mes y día, sin separación entre valores. Por ejemplo 20251001.
+- Nombre de la provincia: será el nombre de la provincia donde se hizo la ruta, en minúsculas y sin espacios. Por ejemplo ciudadreal.
+- Idioma: se pondrá el idioma en el que está escrita la ruta. Por ejemplo es.
+- Ejemplo de nombre de archivo: 20250930-cuenca-es.json
+- Para que funcionen las traducciones en las rutas deberá de existir una versión de cada ruta es su correspondiente idioma. Para el caso anterior, serían estos 3 archivos -> 20250930-cuenca-es.json, 20250930-cuenca-en.json y 20250930-cuenca-va.json

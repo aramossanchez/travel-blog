@@ -2,9 +2,12 @@
 
 :root {
   --background: #eddaad;
+  /* --background: #dfdfdf; */
   --foreground: #221d16;
   --foregroundSecondary: #4d4337;
   --primaryColor: #b89654;
+  --secondaryColor: #ffd900;
+  /* --primaryColor: #de5ffd; */
 }
 
 @theme inline {
@@ -12,6 +15,7 @@
   --color-foreground: var(--foreground);
   --color-foregroundSecondary: var(--foregroundSecondary);
   --color-primaryColor: var(--primaryColor);
+  --color-secondaryColor: var(--secondaryColor);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -22,6 +26,7 @@
     --foreground: #221d16;
     --foregroundSecondary: #221d165d;
     --primaryColor: #b89654;
+    --secondaryColor: #ffd900;
   }
 }
 

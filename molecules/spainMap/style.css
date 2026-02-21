@@ -1,0 +1,23 @@
+.province {
+  fill: var(--color-background);
+  stroke: var(--primaryColor);
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+  cursor: default;
+}
+.province-visited {
+  fill: var(--primaryColor);
+  stroke: var(--primaryColor);
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+  pointer-events: fill;
+}
+
+.province:hover {
+  fill: var(--primaryColor);
+}
+.province-visited:hover {
+  fill: var(--color-secondaryColor);
+}

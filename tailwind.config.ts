@@ -19,6 +19,7 @@ export default {
         foreground: "var(--foreground)",
         foregroundSecondary: "var(--foregroundSecondary)",
         primaryColor: "var(--primaryColor)",
+        secondaryColor: "var(--secondaryColor)",
       },
     },
   },
