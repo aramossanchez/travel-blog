@@ -8,7 +8,6 @@ export async function GET(
   { params }: { params: Promise<{ section: SectionKey; locale: Locale }> }
 ): Promise<Response> {
   const { section, locale } = await params;
-  console.log("llego a buscar secciones dentro de todas las rutas", section);
   const dirPath = path.join(process.cwd(), "data", locale);
   try {
     const files = await readdir(dirPath);
@@ -31,10 +30,10 @@ export async function GET(
       return item.content;
     });
 
-    // EL RESULTADO ES UN ARRAY CON ARRAYS DENTRO. SE DEBE APLANAR
+    // EL RESULTADO ES UN ARRAY CON ARRAYS DENTRO. SE APLANA
     const flattenedData = filteredData.flat();
 
-    // SE OBTIENE LA SECCION ROUTE Y LA SECCIÓN SOLICITADA DE CADA RUTA
+    // SE OBTIENE LA SECCIÓN ROUTE Y LA SECCIÓN SOLICITADA DE CADA RUTA
     const finalData = flattenedData.map((route: RouteDataType) => {
       return {
         id: route.id,

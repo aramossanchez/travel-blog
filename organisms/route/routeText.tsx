@@ -14,7 +14,7 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
   const t = useTranslations("Route");
 
   const sectionKeys: SectionKey[] = Object.keys(data).filter(
-    (key) => key !== "id"
+    (key) => key !== "id",
   ) as SectionKey[];
   return (
     <article className="organism space-y-16 relative">
@@ -25,7 +25,7 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
         gapInButton="110"
       />
       {sectionKeys.map((key: SectionKey) => {
-        if (key === "route") {
+        if (key === "route" && data.route) {
           return (
             <header key={`section-${key}`} className="w-full space-y-4">
               {data.route.content.map((data) => {
@@ -34,13 +34,16 @@ export default function RouteTextOrganism({ data }: RouteTextOrganismProps) {
             </header>
           );
         }
-        return (
-          <SectionInSingleRouteMolecule
-            key={`section-${key}`}
-            content={data?.[key].content}
-            sectionType={key}
-          />
-        );
+        if (data?.[key]) {
+          return (
+            <SectionInSingleRouteMolecule
+              key={`section-${key}`}
+              content={data[key].content}
+              sectionType={key}
+            />
+          );
+        }
+        return null;
       })}
     </article>
   );
