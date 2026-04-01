@@ -1,0 +1,20 @@
+interface NotebookIconProps {
+  color?: string;
+  size?: number;
+}
+
+export default function NotebookIcon({ color, size = 30 }: NotebookIconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+    >
+      <path
+        fill={color || "currentColor"}
+        d="M64 64l0 40-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 80-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 80-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 40c0 35.3 28.7 64 64 64l48 0 0-512-48 0C92.7 0 64 28.7 64 64zM416 0l-192 0 0 512 192 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64z"
+      />
+    </svg>
+  );
+}

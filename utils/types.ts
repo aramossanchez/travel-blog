@@ -54,7 +54,11 @@ export type SectionKey =
   | "roller"
   | "sleep"
   | "eat"
-  | "return";
+  | "return"
+  | "motorbike"
+  | "experience"
+  | "videos"
+  | "images";
 
 export type RouteDataType = { id: string } & {
   [K in SectionKey]?: Section;

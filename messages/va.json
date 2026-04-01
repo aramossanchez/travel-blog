@@ -13,7 +13,11 @@
     "roller": "Ruta en patins",
     "sleep": "Allotjament",
     "eat": "Menjar",
-    "return": "Viatge de tornada"
+    "return": "Viatge de tornada",
+    "motorbike": "La Moto",
+    "experience": "La Meva Experiència",
+    "videos": "Alguns vídeos",
+    "images": "Algunes fotos"
   },
   "NewBlog": {
     "title": "Crear una nova entrada de blog",

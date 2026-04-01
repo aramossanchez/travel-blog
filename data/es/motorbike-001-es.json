@@ -1,0 +1,86 @@
+[
+  {
+    "id": "motorbike-001",
+    "motorbike": {
+      "content": [
+        {
+          "type": "primaryTitle",
+          "text": "Voge 625 DSX"
+        },
+        {
+          "type": "link",
+          "src": "https://vogespain.es/modelos/625dsx",
+          "text": "Página oficial de la Voge 625 DSX"
+        },
+        {
+          "type": "image-presentation",
+          "src": "/images/home/moto.png",
+          "alt": "Foto de la Voge 625 DSX"
+        },
+        {
+          "type": "introduction",
+          "text": "Cuenca, situada en Castilla-La Mancha, es una ciudad declarada Patrimonio de la Humanidad por la UNESCO. Su casco histórico se alza entre las hoces del río Júcar y del Huécar, ofreciendo un paisaje espectacular de casas colgadas y callejuelas empedradas. "
+        },
+        {
+          "type": "introduction",
+          "text": "Destaca su catedral de estilo gótico, uno de los primeros templos de este estilo en España. La ciudad combina tradición y modernidad con museos como el de Arte Abstracto Español. Rodeada de naturaleza, es también punto de partida para rutas por la Serranía de Cuenca. Un destino que mezcla historia, cultura y paisajes únicos."
+        }
+      ]
+    },
+    "experience": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Experiencia usándola"
+        },
+        {
+          "type": "paragraph",
+          "text": "Menudo pepino, niño"
+        }
+      ]
+    },
+    "videos": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Algunos vídeos de la Voge 625 DSX"
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-patines",
+          "label": "Video del paseo en patines por el parque."
+        },
+        {
+          "type": "video",
+          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+          "alt": "video-patines",
+          "label": "Video del paseo en patines por el parque."
+        }
+      ]
+    },
+    "images": {
+      "content": [
+        {
+          "type": "title",
+          "text": "Algunas imágenes de la Voge 625 DSX"
+        },
+        {
+          "type": "carrousel",
+          "carrousel": [
+            {
+              "src": "/tostadas.jpg",
+              "alt": "comida-1",
+              "label": "Tostadas deliciosas"
+            },
+            {
+              "src": "/tarta.jpeg",
+              "alt": "comida-2",
+              "label": "Tarta deliciosa"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

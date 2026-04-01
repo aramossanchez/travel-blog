@@ -9,6 +9,9 @@ import LookForCityIcon from "@/atoms/icons/lookForCity";
 import MotorcycleIcon from "@/atoms/icons/motorcycle";
 import RollerIcon from "@/atoms/icons/roller";
 import ArrowSortDownIcon from "@/atoms/icons/arrowSortDown";
+import NotebookIcon from "@/atoms/icons/notebook";
+import VideoCameraIcon from "@/atoms/icons/videoCamera";
+import PhotoCameraIcon from "@/atoms/icons/photoCamera";
 
 interface IconSelectorProps {
   string: string;
@@ -44,6 +47,14 @@ export default function iconSelector({
       return <ArrowSortDownIcon size={size} color={color} />;
     case "dateAsc":
       return <ArrowSortUpIcon size={size} color={color} />;
+    case "motorbike":
+      return <MotorcycleIcon size={size} color={color} />;
+    case "experience":
+      return <NotebookIcon size={size} color={color} />;
+    case "videos":
+      return <VideoCameraIcon size={size} color={color} />;
+    case "images":
+      return <PhotoCameraIcon size={size} color={color} />;
     default:
       return null;
   }

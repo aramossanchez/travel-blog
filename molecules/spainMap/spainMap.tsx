@@ -49,7 +49,7 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
     if (!provinces.length) return;
 
     const width = 800;
-    const height = 600;
+    const height = 400;
 
     const svg = d3
       .select(svgRef.current)
@@ -59,7 +59,7 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
     const projection = d3
       .geoMercator()
       .center([-3, 40])
-      .scale(2500)
+      .scale(2000)
       .translate([width / 2, height / 2]);
 
     const path = d3.geoPath().projection(projection);

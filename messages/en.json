@@ -13,7 +13,11 @@
     "roller": "Roller skating route",
     "sleep": "Accommodation",
     "eat": "Food",
-    "return": "Return trip"
+    "return": "Return trip",
+    "motorbike": "The Motorbike",
+    "experience": "My Experience",
+    "videos": "Some videos",
+    "images": "Some photos"
   },
   "NewBlog": {
     "title": "Create a new blog post",
