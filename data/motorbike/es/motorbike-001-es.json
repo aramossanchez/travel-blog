@@ -46,16 +46,19 @@
           "text": "Algunos vídeos de la Voge 625 DSX"
         },
         {
-          "type": "video",
-          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
-          "alt": "video-patines",
-          "label": "Video del paseo en patines por el parque."
-        },
-        {
-          "type": "video",
-          "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
-          "alt": "video-patines",
-          "label": "Video del paseo en patines por el parque."
+          "type": "carrousel-videos",
+          "carrousel": [
+            {
+              "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+              "alt": "video-patines",
+              "label": "Vídeo en moto"
+            },
+            {
+              "src": "https://www.youtube.com/embed/aVK7onxwhgY?si=fMfDJzPfho76D7Rg",
+              "alt": "video-patines",
+              "label": "Vídeo en moto"
+            }
+          ]
         }
       ]
     },

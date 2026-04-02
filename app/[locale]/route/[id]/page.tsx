@@ -8,7 +8,6 @@ export default async function Route({
 }) {
   const { id, locale } = await params;
   const localizedId = id.slice(0, id.length - 2) + locale;
-  console.log("localizedId", localizedId);
 
   return <RouteTemplate id={localizedId} locale={locale} />;
 }

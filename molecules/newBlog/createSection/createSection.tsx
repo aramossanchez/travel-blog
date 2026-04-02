@@ -14,6 +14,7 @@ import { SectionKey } from "@/utils/types";
 import SubtitleContentFormMolecule from "../contentForms/subtitleContentForm";
 import LinkContentFormMolecule from "../contentForms/linkContentForm";
 import SeparatorContentFormMolecule from "../contentForms/separatorContentForm";
+import CarrouselVideosContentFormMolecule from "../contentForms/carrouselVideosContentForm";
 
 interface CreateSectionMoleculeProps {
   section: SectionKey;
@@ -37,8 +38,6 @@ export default function CreateSectionMolecule({
   // ESTILOS DEPENDIENTES DE VARIABLES
   const styleBlockRouteSection = showContent ? "max-h-fit" : "max-h-0";
   const styleButtonShowRouteSection = showContent ? "rotate-270" : "rotate-90";
-
-  console.log(finalJson[section].content);
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -132,6 +131,14 @@ export default function CreateSectionMolecule({
                       section={section}
                     />
                   )}
+                  {content.type === "carrousel-videos" && (
+                    <CarrouselVideosContentFormMolecule
+                      key={`${section}-carrousel-videos-${index}`}
+                      index={index}
+                      id={content.id as string}
+                      section={section}
+                    />
+                  )}
                   {content.type === "video" && (
                     <VideoContentFormMolecule
                       key={`${section}-video-${index}`}
@@ -142,7 +149,7 @@ export default function CreateSectionMolecule({
                   )}
                 </>
               );
-            }
+            },
           )}
         <Button onClick={() => addRouteRepeatedSection(section, "paragraph")}>
           <Button.Icon>
@@ -179,6 +186,14 @@ export default function CreateSectionMolecule({
             <PlusIcon size={20} />
           </Button.Icon>
           <Button.Text>Añadir carrusel (carrusel de imágenes)</Button.Text>
+        </Button>
+        <Button
+          onClick={() => addRouteRepeatedSection(section, "carrousel-videos")}
+        >
+          <Button.Icon>
+            <PlusIcon size={20} />
+          </Button.Icon>
+          <Button.Text>Añadir carrusel (carrusel de videos)</Button.Text>
         </Button>
         <Button onClick={() => addRouteRepeatedSection(section, "video")}>
           <Button.Icon>

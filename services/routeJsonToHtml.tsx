@@ -41,8 +41,8 @@ export default function routeJsonToHtml({
                     {index === data.authors.length - 2
                       ? " y "
                       : index < data.authors.length - 1
-                      ? ", "
-                      : "."}
+                        ? ", "
+                        : "."}
                   </span>
                 </Fragment>
               );
@@ -118,6 +118,32 @@ export default function routeJsonToHtml({
             })}
           </div>
           <SliderImages images={data.carrousel} />
+        </Fragment>
+      );
+    case "carrousel-videos":
+      return (
+        <Fragment key={data.type + "-" + index}>
+          <div className="grid-cols-3 gap-4 hidden lg:grid">
+            {data.carrousel.map((video) => {
+              return (
+                <div key={video.src} className="gap-y-1 flex flex-col">
+                  <iframe
+                    className="aspect-[16/9] border-2 border-primaryColor rounded-lg overflow-hidden lg:max-w-[500px]"
+                    id={video.src}
+                    width="auto"
+                    height="auto"
+                    src={video.src}
+                    title={video.alt}
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                  <label className="italic" htmlFor={video.src}>
+                    · {video.label}
+                  </label>
+                </div>
+              );
+            })}
+          </div>
         </Fragment>
       );
     case "video":

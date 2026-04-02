@@ -7,9 +7,7 @@ export default async function Motorbike({
   params: Promise<{ id: string; locale: Locale }>;
 }) {
   const { id, locale } = await params;
-  console.log("ID Y LOCALE", id, locale);
   const localizedId = id + "-" + locale;
-  console.log("localizedId", localizedId);
 
   return <MotorbikeTemplate id={localizedId} locale={locale} />;
 }

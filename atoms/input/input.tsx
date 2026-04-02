@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import CheckIcon from "../icons/check";
 import CrossIcon from "../icons/cross";
 

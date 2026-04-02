@@ -8,7 +8,7 @@ export type CarouselItem = {
 export type Locale = "es" | "en" | "va";
 
 export type CarrouselType = {
-  type: "carrousel";
+  type: "carrousel" | "carrousel-videos";
   carrousel: CarouselItem[];
   id: string;
 };
@@ -43,6 +43,7 @@ export type ContentBlockType =
   | "image"
   | "video"
   | "carrousel"
+  | "carrousel-videos"
   | "separator";
 
 export type SectionKey =

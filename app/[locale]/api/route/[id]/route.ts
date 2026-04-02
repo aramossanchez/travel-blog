@@ -5,11 +5,11 @@ import path from "path";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string; locale: Locale }> }
+  { params }: { params: Promise<{ id: string; locale: Locale }> },
 ): Promise<Response> {
   const { id, locale } = await params;
   const url = `/${locale}/${id}.json`;
-  const filePath: string = path.join(process.cwd(), "data", url);
+  const filePath: string = path.join(process.cwd(), "data/route", url);
 
   try {
     const raw: string = await readFile(filePath, "utf8");

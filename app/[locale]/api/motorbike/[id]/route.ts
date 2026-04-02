@@ -9,8 +9,7 @@ export async function GET(
 ): Promise<Response> {
   const { id, locale } = await params;
   const url = `/${locale}/${id}.json`;
-  console.log(id, locale, url);
-  const filePath: string = path.join(process.cwd(), "data", url);
+  const filePath: string = path.join(process.cwd(), "data/motorbike", url);
 
   try {
     const raw: string = await readFile(filePath, "utf8");
