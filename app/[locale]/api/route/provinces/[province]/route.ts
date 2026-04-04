@@ -1,4 +1,4 @@
-import { Locale } from "@/utils/types";
+import { Locale, RouteDataType } from "@/utils/types";
 import { readdir, readFile } from "fs/promises";
 import { NextRequest } from "next/server";
 import path from "path";
@@ -8,7 +8,8 @@ export async function GET(
   { params }: { params: Promise<{ province: string; locale: Locale }> },
 ): Promise<Response> {
   const { province, locale } = await params;
-  const dirPath = path.join(process.cwd(), "data", locale);
+  const dirPath = path.join(process.cwd(), "data/route", locale);
+  console.log(dirPath);
   try {
     const files = await readdir(dirPath);
     const jsonFiles = files.filter((file) => file.endsWith(".json"));
@@ -24,7 +25,44 @@ export async function GET(
       }),
     );
 
-    return Response.json(data.flat(), { status: 200 });
+    const sortedData = data.sort((a, b) => b.file.localeCompare(a.file));
+
+    // SE APLANA EL ARRAY
+    const flattenedSortedData = sortedData.flat();
+
+    const dataForProvinces = flattenedSortedData
+      .map((route: RouteDataType) => {
+        const id = route.id;
+        const routeInfo = route?.route?.content;
+        if (!routeInfo) {
+          return null;
+        }
+        const title = routeInfo.find(
+          (route) => route.type === "primaryTitle",
+        )?.text;
+        const image = routeInfo.find(
+          (route) => route.type === "image-presentation",
+        )?.src;
+        const text = routeInfo.find(
+          (route) => route.type === "introduction",
+        )?.text;
+        const date = routeInfo.find(
+          (route) => route.type === "published",
+        )?.date;
+        if (!id || !title || !image || !text || !date) {
+          return null;
+        }
+        return {
+          id: id,
+          primaryTitle: title,
+          imagePresentation: image,
+          introduction: text,
+          published: date,
+        };
+      })
+      .filter(Boolean);
+
+    return Response.json(dataForProvinces, { status: 200 });
   } catch (err) {
     const error = err as NodeJS.ErrnoException;
     if (error.code === "ENOENT") {

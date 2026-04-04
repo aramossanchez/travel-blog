@@ -8,7 +8,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string; locale: Locale }> },
 ): Promise<Response> {
   const { locale } = await params;
-  const dirPath = path.join(process.cwd(), "data", locale);
+  const dirPath = path.join(process.cwd(), "data/route", locale);
   try {
     const files = await readdir(dirPath);
     const jsonFiles = files.filter((file) => file.endsWith(".json"));

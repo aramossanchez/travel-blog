@@ -5,10 +5,10 @@ import path from "path";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ section: SectionKey; locale: Locale }> }
+  { params }: { params: Promise<{ section: SectionKey; locale: Locale }> },
 ): Promise<Response> {
   const { section, locale } = await params;
-  const dirPath = path.join(process.cwd(), "data", locale);
+  const dirPath = path.join(process.cwd(), "data/route", locale);
   try {
     const files = await readdir(dirPath);
     const jsonFiles = files.filter((file) => file.endsWith(".json"));
@@ -21,7 +21,7 @@ export async function GET(
           file,
           content: JSON.parse(content),
         };
-      })
+      }),
     );
     const sortedData = data.sort((a, b) => b.file.localeCompare(a.file));
 

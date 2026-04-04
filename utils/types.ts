@@ -1,3 +1,5 @@
+import { SPAIN_PROVINCES_AND_IDS } from "./constants";
+
 export type CarouselItem = {
   src: string;
   alt: string;
@@ -73,3 +75,63 @@ export type RouteByGetSectionType = {
 };
 
 export type SortedCriteriaType = "dateAsc" | "dateDesc";
+
+export type RouteForHomeType = {
+  id: string;
+  primaryTitle: string;
+  imagePresentation: string;
+  introduction: string;
+  published: string;
+};
+
+export type SpainProvince =
+  | "alava"
+  | "albacete"
+  | "alicante"
+  | "almeria"
+  | "avila"
+  | "badajoz"
+  | "islas baleares"
+  | "barcelona"
+  | "burgos"
+  | "caceres"
+  | "cadiz"
+  | "castellon"
+  | "ciudad real"
+  | "cordoba"
+  | "a coruna"
+  | "cuenca"
+  | "girona"
+  | "granada"
+  | "guadalajara"
+  | "guipuzcoa"
+  | "huelva"
+  | "huesca"
+  | "jaen"
+  | "leon"
+  | "lleida"
+  | "la rioja"
+  | "lugo"
+  | "madrid"
+  | "malaga"
+  | "murcia"
+  | "navarra"
+  | "ourense"
+  | "asturias"
+  | "palencia"
+  | "las palmas"
+  | "pontevedra"
+  | "salamanca"
+  | "santa cruz de tenerife"
+  | "cantabria"
+  | "segovia"
+  | "sevilla"
+  | "soria"
+  | "tarragona"
+  | "teruel"
+  | "toledo"
+  | "valencia"
+  | "valladolid"
+  | "vizcaya"
+  | "zamora"
+  | "zaragoza";

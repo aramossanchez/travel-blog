@@ -1,11 +1,11 @@
 "use client";
 
 import DropdownMolecule from "@/molecules/dropdown";
-import { useSectionData } from "@/templates/section/sectionProvider";
+import { useProvinceData } from "@/templates/province/provinceProvider";
 import { SortedCriteriaType } from "@/utils/types";
 
-export default function SortedCriteriaSelectorOrganism() {
-  const { sortedCriteria, setSortedCriteria } = useSectionData();
+export default function ProvinceSortedCriteriaSelectorOrganism() {
+  const { sortedCriteria, setSortedCriteria } = useProvinceData();
 
   return (
     <article className="organism">

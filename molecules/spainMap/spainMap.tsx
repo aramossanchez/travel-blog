@@ -9,13 +9,14 @@ import { Locale } from "@/utils/types";
 import { getAllProvincesFromRoutes } from "@/services/getAllProvincesFormRoutes";
 import { getSimplifiedProvinceName } from "@/services/getSimplifiedProvinceName";
 import TooltipAtom from "@/atoms/tooltip/tooltip";
-import { getRoutesByProvince } from "@/services/getRoutesByProvinces";
+import { useRouter } from "next/navigation";
 
 interface SpainMapMoleculeProps {
   locale: Locale;
 }
 
 export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
+  const router = useRouter();
   const svgRef = useRef();
   const [tooltipCoordinates, setTooltipCoordinates] = useState<{
     x: number;
@@ -37,6 +38,7 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
     const loadData = async () => {
       setLoading(true);
       const provincesFromRoutes = await getAllProvincesFromRoutes(locale);
+      console.log(provincesFromRoutes);
       setVisitedProvinces(provincesFromRoutes);
       const data = await getTopoJSONSpain();
       setProvinces(data);
@@ -81,27 +83,23 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
         return isVisited ? "province-visited" : "province";
       })
       .on("mouseenter", async function (event, province) {
-        console.log(province.properties);
         setTooltipCoordinates({ x: event.layerX, y: event.layerY });
         setHoveredProvince(province.properties);
-        const routes = await getRoutesByProvince(
-          getSimplifiedProvinceName(province.properties.cod_prov),
-          locale,
-        );
-        console.log(routes);
       })
       .on("mouseleave", function () {
         setTooltipCoordinates(null);
+      })
+      .on("click", (event, d) => {
+        router.push(
+          `/route/province/${getSimplifiedProvinceName(d.properties.cod_prov)}`,
+        );
       });
-    // .on("click", (event, d) => {
-    //   console.log("Provincia:", d.properties.name);
-    // });
   }, [provinces]);
 
   return (
     <div className="bg-foreground w-full h-full relative">
       {loading ? (
-        <div className="w-full h-full flex flex-col items-center justify-center gap-y-8">
+        <div className="w-full h-full flex flex-col items-center justify-center gap-y-8 py-10">
           <h2 className="text-primaryColor">Cargando mapa...</h2>
           <LoaderAtom size={200} color="var(--primaryColor)" />
         </div>

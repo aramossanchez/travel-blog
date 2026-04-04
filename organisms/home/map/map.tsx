@@ -10,7 +10,7 @@ export default function MapOrganism({ locale }: MapOrganismProps) {
   return (
     <article className="organism">
       <div className="w-full flex items-center justify-center">
-        <div className="w-full h-full border-4 border-primaryColor rounded-xl">
+        <div className="w-full h-full border-4 border-primaryColor rounded-xl overflow-hidden">
           <SpainMapMolecule locale={locale} />
         </div>
       </div>
