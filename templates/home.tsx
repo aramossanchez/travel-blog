@@ -10,7 +10,7 @@ export default function HomeTemplate({ locale }: { locale: Locale }) {
   return (
     <main className="template">
       <TitleOrganism />
-      <PresentationOrganism />
+      {/* <PresentationOrganism /> */}
       <MapOrganism locale={locale} />
       <LastRoutesOrganism locale={locale} />
       <MotorbikeOrganism />

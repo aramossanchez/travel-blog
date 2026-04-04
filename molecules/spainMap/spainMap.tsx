@@ -38,7 +38,6 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
     const loadData = async () => {
       setLoading(true);
       const provincesFromRoutes = await getAllProvincesFromRoutes(locale);
-      console.log(provincesFromRoutes);
       setVisitedProvinces(provincesFromRoutes);
       const data = await getTopoJSONSpain();
       setProvinces(data);

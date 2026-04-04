@@ -13,9 +13,9 @@ export default function MotorbikeOrganism() {
   ];
   return (
     <article className="organism space-y-8">
-      <h2>La moto</h2>
+      <h1>La moto</h1>
       <HrAtom />
-      <main className="grid grid-cols-2 gap-8">
+      <main className="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-16">
         {motorbikeData.map(({ image, title, text, href }) => (
           <CardImageTitleTextMolecule
             key={title}

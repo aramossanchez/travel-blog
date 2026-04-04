@@ -12,9 +12,9 @@ export default async function LastRoutesOrganism({
 
   return (
     <article className="organism space-y-8">
-      <h2>Últimas Rutas</h2>
+      <h1>Últimas Rutas</h1>
       <HrAtom />
-      <main className="grid grid-cols-3 gap-8">
+      <main className="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-16">
         {lastRoutes && lastRoutes.length > 0 ? (
           lastRoutes.map((route: RouteForHomeType) => {
             // DATOS PARA MOSTRAR RESUMEN DE CADA RUTA

@@ -102,7 +102,7 @@ h3 {
   .organism {
     grid-column-start: 1;
     grid-column-end: -1;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 }
 
