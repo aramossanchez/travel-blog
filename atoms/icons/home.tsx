@@ -10,6 +10,7 @@ export default function HomeIcon({ color, size = 30 }: HomeIconProps) {
       viewBox="0 0 640 640"
       width={size}
       height={size}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       <path
         fill={color || "currentColor"}

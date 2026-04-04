@@ -16,6 +16,7 @@ export default function CopyIcon({
       height={size}
       width={size}
       className={className}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       <path
         fill={color || "currentColor"}

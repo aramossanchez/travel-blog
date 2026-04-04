@@ -10,6 +10,7 @@ export default function NotebookIcon({ color, size = 30 }: NotebookIconProps) {
       viewBox="0 0 512 512"
       width={size}
       height={size}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       <path
         fill={color || "currentColor"}

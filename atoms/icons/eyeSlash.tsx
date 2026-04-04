@@ -16,6 +16,7 @@ export default function EyeSlashIcon({
       width={size}
       height={size}
       className={className}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       <path
         fill={color || "currentColor"}

@@ -75,6 +75,12 @@ h3 {
   padding-bottom: 80px;
 }
 
+.full-size-organism {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 40px 80px;
+}
+
 .organism {
   grid-column-start: 2;
   grid-column-end: 10;
@@ -97,12 +103,18 @@ h3 {
 @media screen and (max-width: 1024px) {
   .template {
     grid-template-columns: repeat(8, 1fr);
-    padding: 0 20px 80px 20px;
+    padding-bottom: 80px;
+    row-gap: 40px;
+  }
+  .full-size-organism {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 40px 20px;
   }
   .organism {
     grid-column-start: 1;
     grid-column-end: -1;
-    padding: 20px 0;
+    padding: 20px;
   }
 }
 

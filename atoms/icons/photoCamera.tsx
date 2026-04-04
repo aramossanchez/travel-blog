@@ -13,6 +13,7 @@ export default function PhotoCameraIcon({
       viewBox="0 0 640 640"
       width={size}
       height={size}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       <path
         fill={color || "currentColor"}

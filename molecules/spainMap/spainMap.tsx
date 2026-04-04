@@ -10,6 +10,7 @@ import { getAllProvincesFromRoutes } from "@/services/getAllProvincesFormRoutes"
 import { getSimplifiedProvinceName } from "@/services/getSimplifiedProvinceName";
 import TooltipAtom from "@/atoms/tooltip/tooltip";
 import { useRouter } from "next/navigation";
+import { useScreenWidth } from "@/hooks/useScreenWidth";
 
 interface SpainMapMoleculeProps {
   locale: Locale;
@@ -18,6 +19,7 @@ interface SpainMapMoleculeProps {
 export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
   const router = useRouter();
   const svgRef = useRef();
+  const screenWidth = useScreenWidth();
   const [tooltipCoordinates, setTooltipCoordinates] = useState<{
     x: number;
     y: number;
@@ -49,8 +51,8 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
   useEffect(() => {
     if (!provinces.length) return;
 
-    const width = 800;
-    const height = 400;
+    const width = screenWidth > 768 ? 800 : 500;
+    const height = screenWidth > 768 ? 400 : 500;
 
     const svg = d3
       .select(svgRef.current)
@@ -88,9 +90,9 @@ export default function SpainMapMolecule({ locale }: SpainMapMoleculeProps) {
       .on("mouseleave", function () {
         setTooltipCoordinates(null);
       })
-      .on("click", (event, d) => {
+      .on("click", (event, province) => {
         router.push(
-          `/route/province/${getSimplifiedProvinceName(d.properties.cod_prov)}`,
+          `/route/province/${getSimplifiedProvinceName(province.properties.cod_prov)}`,
         );
       });
   }, [provinces]);

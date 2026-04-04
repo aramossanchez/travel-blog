@@ -71,7 +71,7 @@ export default function routeJsonToHtml({
     case "title":
       return (
         <header key={data.type + "-" + data.text} className="space-y-2">
-          <div className="flex flex-row items-center gap-x-4">
+          <div className="flex flex-row items-start gap-x-4">
             {iconSelector({ string: sectionType })}
             <h2>{data.text}</h2>
           </div>
@@ -123,7 +123,7 @@ export default function routeJsonToHtml({
     case "carrousel-videos":
       return (
         <Fragment key={data.type + "-" + index}>
-          <div className="grid-cols-3 gap-4 hidden lg:grid">
+          <div className="lg:grid-cols-3 grid-cols-1 lg:gap-4 grid gap-8">
             {data.carrousel.map((video) => {
               return (
                 <div key={video.src} className="gap-y-1 flex flex-col">
